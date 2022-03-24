@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom';
 import './Home.css';
 
 const Home = (props) => {
-    
+     
 // Navegar
     let navigate = useNavigate();
 

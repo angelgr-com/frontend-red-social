@@ -39,10 +39,13 @@ const Home = (props) => {
             
             <div className='designHome'>
                     
-                <div className="diseñoPosts">
+                {/* <div className="diseñoPosts">
                 funcion navigate a registro a login
                 </div>
+                 */}
                 
+
+
                 
                 
             </div>

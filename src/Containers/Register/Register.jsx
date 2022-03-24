@@ -40,8 +40,8 @@ const Register = (props) => {
 
     //Funciones locales del componente
 
-    const registrame = async () => {
-
+    const registrame = async () => { 
+ 
         //Array de distintos campos
 
         setMsgError("");

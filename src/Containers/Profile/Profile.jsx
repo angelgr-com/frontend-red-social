@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import {raiz} from '../../utiles';
 import { MODIFY_CREDENTIALS } from '../../redux/types';
 import axios from 'axios';
-
+ 
 import "./Profile.css";
 import Footer from '../../Components/Footer/Footer';
 

@@ -6,7 +6,7 @@ import axios from 'axios';
 import { MODIFY_CREDENTIALS } from '../../redux/types';
 import { LOGOUT } from '../../redux/types';
 import { raiz } from '../../utiles';
-
+ 
 import './Header.css';
 
 const Header = (props) => {

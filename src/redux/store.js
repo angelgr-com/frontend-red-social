@@ -5,7 +5,7 @@ import reducer from './reducers';
 const createStoreWithMiddleware = applyMiddleware(
 	save({ states: ['tema', 'modify_credentials','login', 'logout' ] })
 )(createStore);
-
+ 
 const store = createStoreWithMiddleware(
     reducer,
     load({ states: ['tema', 'modify_credentials', 'login', 'logout'] }),

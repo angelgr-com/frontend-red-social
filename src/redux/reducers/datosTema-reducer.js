@@ -1,4 +1,4 @@
-import {TEMA} from '../types';
+import {TEMA} from '../types'; 
 
 const initialState = {
     tema: ""

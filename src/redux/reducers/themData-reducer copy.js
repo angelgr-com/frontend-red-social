@@ -1,13 +1,13 @@
-import {TEMA} from '../types'; 
+import {THEME} from '../types'; 
 
 const initialState = {
-    tema: ""
+    theme: ""
 };
 
-const temaReducer = (state = initialState, action) => {
+const themeReducer = (state = initialState, action) => {
     switch(action.type){
         //GUARDO EN EL ESTADO LOS DATOS DEL GENERO
-        case TEMA :// se llamara post
+        case theme :// se llamara post
             return action.payload;
 
         default :
@@ -15,4 +15,4 @@ const temaReducer = (state = initialState, action) => {
     }
 }
 
-export default temaReducer;
+export default themeReducer;

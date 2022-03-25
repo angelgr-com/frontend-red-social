@@ -1,0 +1,15 @@
+.containerTheme {
+    background-color: lightgrey;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desgignThemes {
+    background-color: brown;
+    height: 100%;
+    width: 100%;
+}

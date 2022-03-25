@@ -8,6 +8,7 @@ import Login from './Containers/Login/Login';
 import Register from './Containers/Register/Register';
 import Admin from './Containers/Admin/Admin';
 import Profile from './Containers/Profile/Profile';
+import Theme from './Containers/Theme/Theme'; 
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/admin" element={<Admin/>}/>
           {/* <Route path="/post" element={<Post/>}/> */}
+          <Route path="/:theme" element={<Theme/>}/> 
+
 
        
        

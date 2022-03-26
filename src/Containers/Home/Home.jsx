@@ -13,7 +13,7 @@ const Home = (props) => {
         navigate("/");
     }
 
-// Hook
+Hook
 
 
 

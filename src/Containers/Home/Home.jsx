@@ -48,7 +48,7 @@ const navegarRegister = () => {
                     <div className="theme" onClick={()=>navegarRegister("/register")}>PIZZAS</div>
                     <div className="theme" onClick={()=>navegarRegister("/register")}>PASTA</div>
                     <div className="theme" onClick={()=>navegarRegister("/register")}>PESCADO</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>CARNE</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>CARNE</div> 
                     <div className="theme" onClick={()=>navegarRegister("/register")}>POLLO</div>
                 </div>          
             </div>

@@ -39,17 +39,17 @@ const navegarRegister = () => {
             
             <div className='designHome'>
                 <div className="desgignThemes">
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ARROCES</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ENSALADAS</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>GUISOS</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ASADOS</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ENTRANTES</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>FRIO</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>PIZZAS</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>PASTA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>PESCADO</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>CARNE</div> 
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>POLLO</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>ARABE</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>ESPAÑOLA</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>FRANCESA</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>ITALIANA</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>MEXICANA</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>CHINA</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>VEGANA</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>AMERICANA</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>FRANCESA</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>INGLESA</div> 
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>TURCA</div>
                 </div>          
             </div>
 
@@ -61,17 +61,17 @@ const navegarRegister = () => {
             
             <div className='designHome'>
                 <div className="desgignThemes">
-                    <div className="theme" onClick={()=>navegar("/:theme","arroces")}>ARROCES</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","emsaladas")}>ENSALADAS</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","guisos")}>GUISOS</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","asados")}>ASADOS</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","entrantes")}>ENTRANTES</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","frio")}>FRIO</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","pizzas")}>PIZZAS</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","pasta")}>PASTA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","pescado")}>PESCADO</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","carne")}>CARNE</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","pollo")}>POLLO</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","arroces")}>ARABE</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","emsaladas")}>ESPAÑOLA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","guisos")}>FRANCESA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","asados")}>ITALIANA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","entrantes")}>MEXICANA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","frio")}>CHINA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","pizzas")}>VEGANA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","pasta")}>AMERICANA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","pescado")}>FRANCESA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","carne")}>INGLESA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","pollo")}>TURCA</div>
                 </div>          
             </div>
         );

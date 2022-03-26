@@ -2,13 +2,14 @@ import {applyMiddleware, createStore} from 'redux';
 import { save, load } from "redux-localstorage-simple";
 import reducer from './reducers';
 
+//poner solo los elementos d index de controllers
 const createStoreWithMiddleware = applyMiddleware(
-	save({ states: ['tema', 'modify_credentials','login', 'logout' ] })
+	save({ states: ['theme', 'modify_credentials','login', 'logout','post' ] })
 )(createStore);
  
 const store = createStoreWithMiddleware(
     reducer,
-    load({ states: ['tema', 'modify_credentials', 'login', 'logout'] }),
+    load({ states: ['theme', 'modify_credentials', 'login', 'logout','post'] }),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__({
         trace: true,
     })

@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'; 
 
-import theme from './themData-reducer';
+import theme from './themeData-reducer';
 import credentials from './loginData-reducer';
 import post from './postData-reducer';
 

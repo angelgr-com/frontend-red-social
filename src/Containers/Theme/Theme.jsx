@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import './Theme.css';
-// import { DETALLES_PELICULA } from '../../redux/types';
+import { POST } from '../../redux/types';
 
 
 const Theme = (props) => { 
@@ -16,8 +16,10 @@ const Theme = (props) => {
             navigate("/detalles"); // CAMBIAR AQUI
     }
 
+
     // Hook
     const [posts, setPosts] = useState([])
+
 
     // Use effect montaje
     useEffect(()=>{
@@ -25,8 +27,8 @@ const Theme = (props) => {
     },[]);
 
 
- // Funcion escoger pelicula
- const escogePost = (post) => {
+    // Funcion escoger pelicula
+   const escogePost = (post) => {
             
     console.log(post);
     //Guardamos el post escogido en REDUX al selecionar el post
@@ -36,15 +38,16 @@ const Theme = (props) => {
 
     //Redirigimos a la vista de detalles Post con navigate
     navigate("/detallesPost"); 
-}
+   };
+
 
     // Funcion que trae peliculas segun el genero  ....${props.genero}
-    const traeTheme = async () => {
+    const traePosts = async () => {
         
-            try {
+        try {
 
             let resultado = await axios.get(`http://localhost:3300/theme/${props.theme}`); 
-            console.log(resultado)
+            console.log("posts llegados de backend")
             setPosts(resultado.data);
             console.log("posts guardados en Hook")
            
@@ -52,29 +55,43 @@ const Theme = (props) => {
         } catch (error) {
             console.log(error);
         }
+
     };
+
+    if (posts[0]?.id != undefined)  {
 
 
     return(
+        
+        <div className="contenidoPosts">
 
-        <div className="contenidoThemes">
+            {posts.map(item => {
 
-        {posts.map(item => {
+                return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
 
-            return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
+                    <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
+                        <p className="post">{item.texto}</p>
+                    </div>
+                )
 
-                <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
-                    <p className="post">{item.texto}</p>
-                </div>
-            )
-
-        })
-        }
+            })
+            }
 
         </div>
-    )
+    ) 
 
+} else {
+
+    return (
+
+        <div className="contenidoPosts2">
+            hola soy ${props.theme}
+        </div>
+    );
 }
+
+
+};
 
 export default connect((state) => ({
     theme: state.theme

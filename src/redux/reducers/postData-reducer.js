@@ -6,8 +6,8 @@ const initialState = {
 
 const postReducer = (state = initialState, action) => {
   switch(action.type){
-      //GUARDO EN EL ESTADO LOS DATOS DEL GENERO
-      case post :// se llamara post
+      //Saves Post
+      case POST :
           return action.payload;
 
       default :

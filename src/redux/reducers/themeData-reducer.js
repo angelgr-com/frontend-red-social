@@ -6,8 +6,8 @@ const initialState = {
 
 const themeReducer = (state = initialState, action) => {
     switch(action.type){
-        //GUARDO EN EL ESTADO LOS DATOS DEL GENERO
-        case theme :// se llamara post
+        //Saves Theme
+        case THEME :
             return action.payload;
 
         default :

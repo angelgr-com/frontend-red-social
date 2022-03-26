@@ -1,10 +1,8 @@
 
 .designRegister {
-    background-image: url("../../img/fondo.jpg"); 
     width: 100vw;
     height: 100vh;
     background-size: cover;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;

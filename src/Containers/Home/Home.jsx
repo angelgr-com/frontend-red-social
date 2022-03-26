@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import {useNavigate} from 'react-router-dom';
 import { THEME } from '../../redux/types';
@@ -60,18 +59,18 @@ const navegarRegister = () => {
         return(
             
             <div className='designHome'>
-                <div className="desgignThemes">
-                    <div className="theme" onClick={()=>navegar("/:theme","arroces")}>ARABE</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","emsaladas")}>ESPAÑOLA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","guisos")}>FRANCESA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","asados")}>ITALIANA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","entrantes")}>MEXICANA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","frio")}>CHINA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","pizzas")}>VEGANA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","pasta")}>AMERICANA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","pescado")}>FRANCESA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","carne")}>INGLESA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","pollo")}>TURCA</div>
+                <div className="designThemes">
+                    <div className="theme" onClick={()=>navegar("/:theme","arabe")}>ARABE</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","española")}>ESPAÑOLA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","francesa")}>FRANCESA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","italiana")}>ITALIANA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","mexicana")}>MEXICANA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","china")}>CHINA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","vegana")}>VEGANA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","americana")}>AMERICANA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","francesa")}>FRANCESA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","inglesa")}>INGLESA</div>
+                    <div className="theme" onClick={()=>navegar("/:theme","turca")}>TURCA</div>
                 </div>          
             </div>
         );

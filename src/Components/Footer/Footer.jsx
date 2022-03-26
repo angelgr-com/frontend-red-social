@@ -9,7 +9,7 @@ const Footer = () => {
         return (
 
             <div className="designFooter">
-            
+            <p><b>Foro Food 2022</b></p>
             </div>
         )
     

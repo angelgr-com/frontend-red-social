@@ -1,6 +1,6 @@
 
 .designHeader {
-    height: 8em;
+    height: 5em;
     width: 100%;
     background-color: lightcoral;
     color: white;
@@ -8,7 +8,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
     box-sizing: border-box;
 }
 

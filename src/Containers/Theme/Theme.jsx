@@ -63,22 +63,25 @@ const Theme = (props) => {
 
     return(
         
-        <div className="contenidoPosts">
+           <div className="designTheme">
+                <div className="contenidoPosts">
 
-            {posts.map(item => {
+                    {posts.map(item => {
 
-                return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
+                        return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
 
-                    <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
-                        <p className="post">{item.texto}</p>
-                    </div>
-                )
+                            <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
+                                <p className="post">{item.texto}</p>
+                            </div>
+                        )
 
-            })
-            }
-
-        </div>
+                    })
+                    }
+                 </div>
+            </div>   
+            
     ) 
+  
 
 } else {
 

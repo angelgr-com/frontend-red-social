@@ -9,7 +9,7 @@
 
 
 .contenidoPosts {
-    background-color: lightgrey;
+    background-color: darkgrey;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@
 }
 
 .contenidoPosts2 {
-  
+    background-color: darkgreygi;
     width: 8oem;
     height: 40em;
     display: flex;

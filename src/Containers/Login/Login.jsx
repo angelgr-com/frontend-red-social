@@ -83,13 +83,14 @@ const Login = (props) => {
                  {/* {
                      <pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
                 <div className="designFormulario">
-                    <input type="email" className="input" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="password" className="input" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e);}}/>
+                    <input type="email" className="inputLogin" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input type="password" className="inputLogin" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e);}}/>
                     {msgError}
                     {msgError2}
                 </div>
                 <br />
-                <div className="button type3 espacio" onClick={()=>login()}>Logueame</div>
+                <div className="buttonLogin" onClick={()=>login()}>ENTRAR</div>
+                {/* <div className="button type3 espacio" onClick={()=>login()}>Logueame</div> */}
                 </div>
             </div>
         );

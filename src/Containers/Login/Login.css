@@ -7,56 +7,54 @@
   align-items: center;
   border: 2px solid black;
 }
-
+/* 
 .loginButton {
     width: 9em;
     height: 3em;
-
     color: white;
-
     transition: 0.3s;
     background-color: green;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-top: 2em;
-}
+} */
 
-.espacio{
+/* .espacio{
     width: 10em;
     height: 3em;
-
-    background-color: transparent;
-   
-
-}
+    background-color: transparent; 
+} */
 
 .login{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+.buttonLogin {
+  height: 2em;
+  width: 5em;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5em;
+}
+
+.inputLogin{
+  height: 2em;
+  width: 15em;
+    border-radius: .5em;
+    border: 1px solid black;
+   
 }
 
 
-@import url("https://fonts.googleapis.com/css?family=Raleway");
 
 
-
-.button {
-  position: relative;
-  padding-top: 0.8em;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  font-size: 1em;
-  font-weight: bolder;
-
-}
+/* 
 .button.type3 {
   color: #000000;
 }
@@ -96,10 +94,5 @@
   width: 100%;
   height: 100%;
   border-radius: 300px;
-}
+} */
 
-.input{
-    border-radius: 300px;
-    margin: 1em;
-    border: 0.5em solid #000000;
-}

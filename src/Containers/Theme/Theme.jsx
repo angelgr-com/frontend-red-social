@@ -27,7 +27,7 @@ const Theme = (props) => {
     },[]);
 
 
-    // Funcion escoger pelicula
+    // Funcion escoger Post
    const escogePost = (post) => {
             
     console.log(post);

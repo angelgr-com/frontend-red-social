@@ -13,8 +13,8 @@ const Register = (props) => {
     let navigate = useNavigate();
 
     //Hooks
-    const [datosUsuario, setDatosUsuario] = useState({
-            nombre: "", apellido: "", edad: "", email: "", password: "", password2: ""
+    const [datosUser, setDatosUser] = useState({
+        name: "", nickname: "", email: "", password: "", avatar: "" // NO HAY QUE PONER IS ADMIN
             
     });
 
@@ -33,25 +33,25 @@ const Register = (props) => {
     
     //Handler (manejador)
     const rellenarDatos = (e) => {
-            setDatosUsuario({...datosUsuario, 
+            setDatosUser({...datosUser, 
                 [e.target.name]: e.target.value})
     };
 
 
     //Funciones locales del componente
 
-    const registrame = async () => {  
+    const registerMe = async () => {  
  
         //Array de distintos campos
 
         setMsgError("");
         let error = "";
 
-        let arrayCampos = Object.entries(datosUsuario);
+        let arrayCampos = Object.entries(datosUser);
         
         // //1 comprobación de errores antes de enviar al backend
 
-        if(datosUsuario.password !== datosUsuario.password2){
+        if(datosUser.password !== datosUser.password2){
 
             return (setMsgError("Los dos password deben de coincidir"));
 
@@ -73,19 +73,19 @@ const Register = (props) => {
         //2construimos el body
 
         let body = {
-            nombre: datosUsuario.nombre,
-            apellido: datosUsuario.apellido,
-            edad: parseInt(datosUsuario.edad),
-            email: datosUsuario.email,
-            nickname: datosUsuario.nickname,
-            password: datosUsuario.password
+            name: datosUser.name,
+            nickname: datosUser.nickname,
+            email: datosUser.email,
+            password: datosUser.password,
+            avatar: datosUser.avatar,
+            isAdmin: datosUser.isAdmin
         }
 
         //3 envio de axios
 
         try {
             
-            let resultado = await axios.post(raiz+"usuarios/registro", body);
+            let resultado = await axios.post(raiz + "/users/register", body);
             console.log(resultado);
             
                 setTimeout(()=>{
@@ -112,15 +112,13 @@ const Register = (props) => {
                     <input type="text" name="edad" id="edad" title="edad" placeholder="Edad:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="nickname" name="nickname" id="nickname" title="nickname" placeholder="Nickname:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    {/* <input type="text" name="dni" id="dni" title="dni" placeholder="DNI" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/> */}
                     <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="password" name="password2" id="password2" title="password2" placeholder="Repite contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    {/* <input type="text" name="telefono" id="telefono" title="telefono" placeholder="Telefono" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/> */}
-                    {/* <input type="text" name="numCuenta" id="numCuenta" title="numCuenta" placeholder="NºCuenta" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/> */}
+                   
                 </div>
                 <div className="bottomCardRegister">
                     {msgError}
-                    <div className="button type32 espacio" onClick={()=>registrame()}>
+                    <div className="button type32 espacio" onClick={()=>registerMe()}>
                         Registrar
                     </div>
                 </div>

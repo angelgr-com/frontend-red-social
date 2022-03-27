@@ -45,7 +45,7 @@ const Login = (props) => {
                  password: datosUsuario.password
             }
 
-            let resultado = await axios.post(raiz +"usuarios/login",body);
+            let resultado = await axios.post(raiz +"/users/login",body);
             console.log(resultado)
             //Cambiamos el valor del hook credenciales, por lo tanto se recargará el componente
             if(resultado.data === "Usuario o contraseña inválido"){

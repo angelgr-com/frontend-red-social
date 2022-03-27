@@ -3,21 +3,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
- 
-    background-image: url("../../img/fondo.jpg");
+    justify-content: center;
     width: 100vw;
-    height: 100vh;
-
-    background-size: cover;
-
-
+    height: 34em;
+    background-color: darkgrey;
 }
 
 .designProfileHalf {
-
     width: 50vw;
-
 }
 
 .profileFieldButton{
@@ -47,15 +40,12 @@
 .updateBoton {
     height: 2em;
     width: 8em;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     background-color: lightsteelblue;
     color: hsl(0, 0%, 30%);
-
     border-radius: 0.2em;
     cursor: pointer;
 
@@ -68,11 +58,7 @@
     
 }
 
-
-
 @import url("https://fonts.googleapis.com/css?family=Raleway");
-
-
 
 .button {
   position: relative;
@@ -130,4 +116,10 @@
     border-radius: 300px;
     margin: 1em;
     border: 0.5em solid #000000;
+}
+
+.designProfile2 {
+  background-color: darkgray;
+  height: 100vh;
+  width: 100vw;
 }

@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import {raiz} from '../../utiles';
 
 const Register = (props) => {
+    console.log("entro en Register")
 
     // Navegar
     let navigate = useNavigate();

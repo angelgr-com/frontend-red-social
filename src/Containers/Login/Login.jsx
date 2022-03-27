@@ -12,6 +12,7 @@ import { LOGIN, LOGOUT, MODIFY_CREDENTIALS } from '../../redux/types';
 import './Login.css';
 
 const Login = (props) => {
+    console.log("entro en Login")
     
     // Navegar
     let navigate = useNavigate();

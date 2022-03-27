@@ -8,24 +8,22 @@ import { POST } from '../../redux/types';
 
 
 const Theme = (props) => { 
+    console.log("entro en theme", props.theme)
 
     // Navegar
     let navigate = useNavigate();
 
     const navegar = () => {
-            navigate("/detalles"); // CAMBIAR AQUI
+        navigate("/detalles"); // AQUI TIENE QUE NAVEGAR A LA VISTA DE DETALLES POST
     }
-
 
     // Hook
     const [posts, setPosts] = useState([])
-
 
     // Use effect montaje
     useEffect(()=>{
         traePosts();
     },[]);
-
 
     // Funcion escoger Post
    const escogePost = (post) => {
@@ -41,7 +39,7 @@ const Theme = (props) => {
    };
 
 
-    // Funcion que trae peliculas segun el genero  ....${props.genero}
+    // Funcion que trae posts segun el tema 
     const traePosts = async () => {
         
         try {

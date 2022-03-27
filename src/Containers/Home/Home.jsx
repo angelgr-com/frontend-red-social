@@ -12,24 +12,19 @@ let navigate = useNavigate();
 
 const navegar = (lugar,theme) => {
 
-    //Guardamos en REDUX el criterio
-    props.dispatch({type: THEME, payload: theme}); 
-
-    navigate(lugar);
+//Guardamos en REDUX el criterio
+props.dispatch({type: THEME, payload: theme}); 
+navigate(lugar);
 }
-
 
 // Funcion Navegar a register
 const navegarRegister = () => { 
-
     navigate("/register");
 }
 
-
 // UseEffect de montaje
-
     // useEffect(() => {
-    //     console.log('')
+    //     // console.log('')
     // }, [])
 
     if(props.credentials?.token === undefined){
@@ -55,7 +50,7 @@ const navegarRegister = () => {
         )
    
     } else {
-        console.log("SI tengo token");
+        console.log("SI tengo token", props.credentials.token);
         return(
             
             <div className='designHome'>

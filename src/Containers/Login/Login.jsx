@@ -77,7 +77,7 @@ const Login = (props) => {
         return(
             
             <div className='designLogin'>
-                <div className='espacio'></div>
+               
                 <div className='login'>
                  {/* {
                      <pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}

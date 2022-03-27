@@ -1,7 +1,7 @@
 .designTheme {
     background-color: blue;
     width: 100vw;
-    height: 100vh;
+    height: 34em;
     display: flex;
     align-items: center;
     justify-content: center;

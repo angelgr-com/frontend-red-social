@@ -21,7 +21,7 @@ const Login = (props) => {
     }, [])
 
     //Hooks (equivalen al estado en los componentes de clase)
-    const [datosUsuario, setDatosUsuario] = useState({email: "", password: ""});
+    const [datosUser, setDatosUser] = useState({email: "", password: ""});
     const [msgError, setMsgError] = useState("");
     const [msgError2, setMsgError2] = useState("");
 
@@ -30,7 +30,7 @@ const Login = (props) => {
     //Funciones handlers
     const rellenarDatos = (e) => {
       
-        setDatosUsuario({...datosUsuario, [e.target.name]: e.target.value})
+        setDatosUser({...datosUser, [e.target.name]: e.target.value})
     };
 
     //Funciones locales
@@ -41,8 +41,8 @@ const Login = (props) => {
             
             //Me invento las credenciales
             let body = {
-                 email: datosUsuario.email,
-                 password: datosUsuario.password
+                 email: datosUser.email,
+                 password: datosUser.password
             }
 
             let resultado = await axios.post(raiz +"/users/login",body);
@@ -95,7 +95,7 @@ const Login = (props) => {
 
 };
 
-// export default connect()(Login);
+
 export default connect((state) => ({
     credentials: state.credentials
 }))(Login);

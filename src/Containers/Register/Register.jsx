@@ -14,7 +14,7 @@ const Register = (props) => {
 
     //Hooks
     const [datosUser, setDatosUser] = useState({
-        name: "", nickname: "", email: "", password: "", avatar: "" // NO HAY QUE PONER IS ADMIN
+        name: "", nickname: "", email: "", password: "", password2: "", avatar: "" 
             
     });
 
@@ -51,7 +51,7 @@ const Register = (props) => {
         
         // //1 comprobación de errores antes de enviar al backend
 
-        if(datosUser.password !== datosUser.password2){
+        if(datosUser.password !== datosUser.password2){ 
 
             return (setMsgError("Los dos password deben de coincidir"));
 

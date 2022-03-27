@@ -9,18 +9,18 @@
 }
 
 .contenidoPosts {
-    background-color: darkgrey;
+    background-color: lightgray;
     width: 100%;
     height: 34em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .contenidoPosts2 {
-    background-color: darkgrey;
+    background-color: lightgray;
     width: 100%;
     height: 34em;
     display: flex;

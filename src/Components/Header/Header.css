@@ -2,7 +2,7 @@
 .designHeader {
     height: 5em;
     width: 100%;
-    background-color: lightcoral;
+    background-color: darkgrey;
     color: white;
     display: flex;
     flex-direction: row;

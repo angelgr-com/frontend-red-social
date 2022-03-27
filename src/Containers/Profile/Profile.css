@@ -6,7 +6,8 @@
     justify-content: center;
     width: 100vw;
     height: 34em;
-    background-color: darkgrey;
+    background-color: lightgray;
+    border: 2px solid black;
 }
 
 .designProfileHalf {

@@ -1,7 +1,7 @@
 
 .designRegister {
   width: 100%;
-  height: 34em;
+  height: 60em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,8 +10,8 @@
 }
 
 .cardRegister {
-    height: 32em;
-    width: 50em;
+    height: 45em;
+    width: 40em;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@
 }
 
 .middleCardRegister {
-    height: 44em;
+    height: 60em;
     width: 20em;
     margin-top: 3em;
     display: flex;
@@ -57,9 +57,9 @@
     justify-content: flex-start;
 }
 
-.input{
+.inputRegister{
   height: 3em;
-  width: 103m;
+  width: 20em;
   border: 1px solid black;
   border-radius: 1em;
  } 

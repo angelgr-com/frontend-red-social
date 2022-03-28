@@ -108,18 +108,18 @@ const Register = (props) => {
                 <div className="upCardRegister">Formulario de Registro</div>
                 <div className="middleCardRegister">
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
-                    <input type="text" name="nombre" id="nombre" title="nombre" placeholder="Nombre:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="text" name="apellido" id="apellido" title="apellido" placeholder="Apellido:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="text" name="edad" id="edad" title="edad" placeholder="Edad:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="nickname" name="nickname" id="nickname" title="nickname" placeholder="Nickname:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='imput' type="text" name="nombre" id="nombre" title="nombre" placeholder="Nombre:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='imput' type="text" name="apellido" id="apellido" title="apellido" placeholder="Apellido:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='imput' type="text" name="edad" id="edad" title="edad" placeholder="Edad:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='imput' type="email" name="email" id="email" title="email" placeholder="Correo Electrónico:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='imput' type="nickname" name="nickname" id="nickname" title="nickname" placeholder="Nickname:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='imput' type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                     <input type="password" name="password2" id="password2" title="password2" placeholder="Repite contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                    
                 </div>
                 <div className="bottomCardRegister">
                     {msgError}
-                    <div className="button type32 espacio" onClick={()=>registerMe()}>
+                    <div className="buttonRegister" onClick={()=>registerMe()}>
                         Registrar
                     </div>
                 </div>

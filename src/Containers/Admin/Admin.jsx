@@ -6,19 +6,27 @@ import { checkError } from '../../utiles';
 import './Admin.css';
 import { connect } from "react-redux";
 import { raiz } from '../../utiles';
+// FALTA EL NAVIGATE
+
 
 // let res="";
 const Admin = (props) => {
 
+    //Navegar
     let navigate = useNavigate();
-    const [res, setRes] = useState("");
 
-    useEffect(() => {
-        console.log('Created')
-    
-    }, [])
+    const navegar1 = () => {
+         navigate("/adminUsuario");
+    }
+
+    const navegar2 = () => {
+        navigate("/adminAuth");
+   }
+
+
+
     //Hooks
-
+    const [res, setRes] = useState("");
     const [datosUsuario, setDatosUsuario] = useState({
         titulo: "", genero: "", sinopsis: "", adult: "",
         popularity: "", imagen: "", video: "", fecha: "",
@@ -99,18 +107,14 @@ const Admin = (props) => {
             console.log(error);
         }
 
-        
-        
-
-        
-
     }
     return (
         <div className='designAdmin'>
             <div className="designAdminInputs">
-                <div className="inputAdmin">VER USUARIOS</div>
-                <div className="inputAdmin">ADMIN USUARIOS</div>
-                <div className="inputAdmin">VER POSTS</div>
+                {/* <div className="inputAdmin">VER USUARIOS</div>
+                <div className="inputAdmin">VER POSTS</div> */}
+                <div className="inputAdmin" onClick={()=>navegar1("/adminUsuario")}>ADMIN USUARIO</div> 
+                <div className="inputAdmin" onClick={()=>navegar2("/adminUsuario")}>ADMIN AUTH</div> 
             </div>
         </div>
     )

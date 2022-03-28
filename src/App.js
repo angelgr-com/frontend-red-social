@@ -9,6 +9,8 @@ import Register from './Containers/Register/Register';
 import Admin from './Containers/Admin/Admin';
 import Profile from './Containers/Profile/Profile';
 import Theme from './Containers/Theme/Theme'; 
+import AdminUsuario from './Containers/AdminUsuario/AdminUsuario'; 
+import AdminAuth from './Containers/AdminAuth/AdminAuth'; 
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
           <Route path="/admin" element={<Admin/>}/>
           {/* <Route path="/post" element={<Post/>}/> */}
           <Route path="/:theme" element={<Theme/>}/> 
-
+          <Route path="/adminUsuario" element={<AdminUsuario/>}/>
+          <Route path="/adminAuth" element={<AdminAuth/>}/>
 
        
        

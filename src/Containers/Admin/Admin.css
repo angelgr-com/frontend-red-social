@@ -1,81 +1,37 @@
 
 .designAdmin {
-    background-image: url("../../img/fondo.jpg"); 
+    background-color: lightgray;
     width: 100vw;
-    height: 100vh;
-    background-size: cover;
+    height: 34em;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-
-
-}
-
-.cardAdminRegPel {
-
-    height: 30em;
-    width: 50em;
-    background-color: rgb(255, 255, 255);
-    border-radius: 4em;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-left:3em;
 }
 
-.upCardAdminRegPel {
+.designAdminInputs {
+    height: 20em;
+    width: 20em;
+    background-color: white;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.inputAdmin {
     height: 4em;
+    width: 12em;
+    border: 1px solid black;
+    border-radius: 1em;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    color: rgb(0, 0, 0);
-    font-size: 2em;
-    font-weight: bold;
-
-}
-
-.middleCardAdminRegPel {
-    height: 15em;
-    margin-top: 3em;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size : 1em;
-    color: black;
-
 }
 
-.bottomCardAdminRegPel {
-    margin-top: 1em;
-    height: 6em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 
-}
-
-.bottomCardAdminRegPelSub {
-
-  height: 6em;
-  width: 15em;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.input{
-  height: 3em;
-  width: 103m;
-  border: 1px solid black;
-  border-radius: 1em;
-} 
 
 
 

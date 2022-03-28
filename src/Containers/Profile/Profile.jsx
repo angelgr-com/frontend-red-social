@@ -80,29 +80,33 @@ const Profile = (props) => {
 
     return (
         <div className="designProfile">
-            <div className="designProfileHalf profileLeft">
+            <div className="designProfileInputs">
 
-                <div className="profileField"><b>Name:<input type="text" name="Name" id="Name" title="Name" placeholder={props.credentials.user.Name} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                <div className="inputProfile"><b>Nombre:<input type="text" name="Name" id="Name" title="Name" placeholder={props.credentials.user.Name} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
                 </b></div>
                 
-                <div className="profileField"><b>Nickname:</b><input type="text" name="nickname" id="nickname" title="nickname" placeholder={props.credentials.user.nickname} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                <div className="inputProfile"><b>Apellido:</b><input type="text" name="nickname" id="nickname" title="nickname" placeholder={props.credentials.user.nickname} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
                 </div>
 
-                <div className="profileField"><b>Email:</b><input type="email" name="email" id="email" title="email" placeholder={props.credentials.user.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
+                <div className="inputProfile"><b>Edad:</b><input type="text" name="email" id="email" title="email" placeholder={props.credentials.user.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
 
-                                
-                <div className="profileField"><b>Password:</b><input type="text" name="password" id="password" title="password" placeholder="*****"autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                <div className="inputProfile"><b>Email:</b><input type="email" name="email" id="email" title="email" placeholder={props.credentials.user.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
+
+                <div className="inputProfile"><b>Nickname:</b><input type="text" name="email" id="email" title="email" placeholder={props.credentials.user.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>               
+
+                <div className="inputProfile"><b>Contraseña:</b><input type="text" name="password" id="password" title="password" placeholder="*****"autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
                 </div>
 
-                <div className="profileField"><b>Avatar:</b><input type="text" name="Avatar" id="Avatar" title="Avatar"  onChange={(e) => { rellenarDatos(e) }} />
+                <div className="inputProfile"><b>Repite Contraseña:</b><input type="text" name="password" id="password" title="password" placeholder="*****"autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                </div>
+
+                <div className="inputProfile"><b>Avatar:</b><input type="text" name="Avatar" id="Avatar" title="Avatar"  onChange={(e) => { rellenarDatos(e) }} />
                 </div>
 
                 <div className="profileFieldButton">
-                    <div className="button type3 espacio" onClick={()=>updateUser()}>Actualiza</div>
+                    <div className="buttonUpdate" onClick={()=>updateUser()}>Actualiza</div>
                 </div>
-                <div className="profileFieldButtonMessage">
-                <div className="bottomCardAdminRegPelSub">{res}</div>
-                </div>
+                
             </div>
         </div>
         

@@ -105,7 +105,7 @@ const Register = (props) => {
         <div className='designRegister'>
              
             <div className="cardRegister">
-                <div className="upCardRegister">Formulario de Registro</div>
+                <div className="upCardRegister">FORMULARIO DE REGISTRO</div>
                 <div className="middleCardRegister">
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
                     <input className='inputRegister' type="text" name="nombre" id="nombre" title="nombre" placeholder="Nombre:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>

@@ -113,15 +113,15 @@ const Admin = (props) => {
                 <div className="middleCardAdminRegPel">
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
                     
-                    <input type="text" name="titulo" id="titulo" title="titulo" placeholder="titulo:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input type="text" name="genero" id="genero" title="genero" placeholder="genero:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input type="text" name="sinopsis" id="sinopsis" title="sinopsis" placeholder="sinopsis:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input type="text" name="adult" id="adult" title="adult" placeholder="adulto:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input type="number" name="popularity" id="popularity" title="popularity" placeholder="popularidad:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input type="text" name="imagen" id="imagen" title="imagen" placeholder="imagen" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input type="text" name="video" id="video" title="video" placeholder="video" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input type="text" name="fecha" id="fecha" title="fecha" placeholder="fecha" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <input type="text" name="idioma" id="idioma" title="idioma" placeholder="idioma" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inputAdmin' type="text" name="titulo" id="titulo" title="titulo" placeholder="titulo:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inputAdmin' type="text" name="genero" id="genero" title="genero" placeholder="genero:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inputAdmin' type="text" name="sinopsis" id="sinopsis" title="sinopsis" placeholder="sinopsis:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inputAdmin' type="text" name="adult" id="adult" title="adult" placeholder="adulto:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inputAdmin' type="number" name="popularity" id="popularity" title="popularity" placeholder="popularidad:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inputAdmin' type="text" name="imagen" id="imagen" title="imagen" placeholder="imagen" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <inpu className='inputAdmin't type="text" name="video" id="video" title="video" placeholder="video" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inputAdmin' type="text" name="fecha" id="fecha" title="fecha" placeholder="fecha" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    <input className='inputAdmin' type="text" name="idioma" id="idioma" title="idioma" placeholder="idioma" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
 
                 </div>
                 <div className="bottomCardAdminRegPel">

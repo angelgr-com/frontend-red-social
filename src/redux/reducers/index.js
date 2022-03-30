@@ -1,13 +1,13 @@
 import {combineReducers} from 'redux'; 
 
-import theme from './themeData-reducer';
-import credentials from './loginData-reducer';
+
+import credentials from './userData-reducer';
 import post from './postData-reducer';
 
 
 
 const rootReducer = combineReducers({
-    credentials, theme, post
+    credentials, post
     // ,search
 });
 

@@ -29,23 +29,19 @@ const navegarRegister = () => {
     //     // console.log('')
     // }, [])
 
-    if(props.credentials?.token === undefined){
+    if(props.credentials?.token !== undefined){
         console.log("NO tengo token");
         return(
             
             <div className='designHome'>
-                <div className="desgignThemes">
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ARABE</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ESPAÑOLA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>FRANCESA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ITALIANA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>MEXICANA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>CHINA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>VEGANA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>AMERICANA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>FRANCESA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>INGLESA</div> 
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>TURCA</div>
+                <div className="designThemes">
+                    <div className="themeEspañola" onClick={()=>navegar("/register")}>ESPAÑOLA</div>
+                    <div className="themeFrancia" onClick={()=>navegar("/register")}>FRANCESA</div>
+                    <div className="themeItalia" onClick={()=>navegar("/register")}>ITALIANA</div>
+                    <div className="themeMexico" onClick={()=>navegar("/register")}>MEXICANA</div>
+                    <div className="themeChina" onClick={()=>navegar("/register")}>CHINA</div>
+                    <div className="themeAmericana" onClick={()=>navegar("/register")}>AMERICANA</div>
+                    <div className="themeInglesa" onClick={()=>navegar("/register")}>INGLESA</div>
                 </div>          
             </div>
 

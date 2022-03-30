@@ -12,6 +12,7 @@ console.log("entro en home");
 // Navegar
 let navigate = useNavigate();
 
+//para nacegar y guardar en redux
 const navegar = (lugar,theme) => {
 
 //Guardamos en REDUX el criterio
@@ -29,23 +30,19 @@ const navegarRegister = () => {
     //     // console.log('')
     // }, [])
 
-    if(props.credentials?.token === undefined){
+    if(props.credentials?.token !== undefined){
         console.log("NO tengo token");
         return(
             
             <div className='designHome'>
-                <div className="desgignThemes">
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ARABE</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ESPAÑOLA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>FRANCESA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>ITALIANA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>MEXICANA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>CHINA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>VEGANA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>AMERICANA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>FRANCESA</div>
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>INGLESA</div> 
-                    <div className="theme" onClick={()=>navegarRegister("/register")}>TURCA</div>
+                <div className="designThemes">
+                    <div className="themeEspañola" onClick={()=>navegarRegister()}>ESPAÑOLA</div>
+                    <div className="themeFrancia" onClick={()=>navegarRegister()}>FRANCESA</div>
+                    <div className="themeItalia" onClick={()=>navegarRegister()}>ITALIANA</div>
+                    <div className="themeMexico" onClick={()=>navegarRegister()}>MEXICANA</div>
+                    <div className="themeChina" onClick={()=>navegarRegister()}>CHINA</div>
+                    <div className="themeAmericana" onClick={()=>navegarRegister()}>AMERICANA</div>
+                    <div className="themeInglesa" onClick={()=>navegarRegister()}>INGLESA</div>
                 </div>          
             </div>
 

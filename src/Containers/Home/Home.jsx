@@ -35,7 +35,7 @@ const navegarRegister = () => {
             
             <div className='designHome'>
                 <div className="desgignThemes">
-                    <div className="theme" style="background-image: url('../../img/fondo.jpg');"> onClick={()=>navegarRegister("/register")}>ARABE</div>
+                    <div className="theme" onClick={()=>navegarRegister("/register")}>ARABE</div>
                     <div className="theme" onClick={()=>navegarRegister("/register")}>ESPAÑOLA</div>
                     <div className="theme" onClick={()=>navegarRegister("/register")}>FRANCESA</div>
                     <div className="theme" onClick={()=>navegarRegister("/register")}>ITALIANA</div>
@@ -57,17 +57,13 @@ const navegarRegister = () => {
             
             <div className='designHome'>
                 <div className="designThemes">
-                    <div className="theme" onClick={()=>navegar("/:theme","arabe")}>ARABE</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","española")}>ESPAÑOLA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","francesa")}>FRANCESA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","italiana")}>ITALIANA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","mexicana")}>MEXICANA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","china")}>CHINA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","vegana")}>VEGANA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","americana")}>AMERICANA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","francesa")}>FRANCESA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","inglesa")}>INGLESA</div>
-                    <div className="theme" onClick={()=>navegar("/:theme","turca")}>TURCA</div>
+                    <div className="themeEspañola" onClick={()=>navegar("/:theme","española")}>ESPAÑOLA</div>
+                    <div className="themeFrancia" onClick={()=>navegar("/:theme","francesa")}>FRANCESA</div>
+                    <div className="themeItalia" onClick={()=>navegar("/:theme","italiana")}>ITALIANA</div>
+                    <div className="themeMexico" onClick={()=>navegar("/:theme","mexicana")}>MEXICANA</div>
+                    <div className="themeChina" onClick={()=>navegar("/:theme","china")}>CHINA</div>
+                    <div className="themeAmericana" onClick={()=>navegar("/:theme","americana")}>AMERICANA</div>
+                    <div className="themeInglesa" onClick={()=>navegar("/:theme","inglesa")}>INGLESA</div>
                 </div>          
             </div>
         );

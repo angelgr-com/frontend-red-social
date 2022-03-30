@@ -33,8 +33,133 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
-    
-   
-  
+
+}
+
+.themeArabe {
+    background-image: url(../../img/Bandera-de-España.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: darkgrey;
+    border: 1px solid black;
+    height: 5em;
+    width: 10em;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeEspañola {
+    background-image: url(../../img/Bandera-de-España.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: darkgrey;
+    border: 1px solid black;
+    height: 5em;
+    width: 10em;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeFrancia {
+    background-image: url(../../img/Bandera-de-Francia.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: darkgrey;
+    border: 1px solid black;
+    height: 5em;
+    width: 10em;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+}
+
+.themeItalia {
+    background-image: url(../../img/Italia.svg);
+    background-color: darkgrey;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    height: 5em;
+    width: 10em;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+}
+
+.themeMexico {
+    background-image: url(../../img/Bandera-de-Mexico.svg);
+    background-color: darkgrey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+    height: 5em;
+    width: 10em;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+}
+
+.themeChina {
+    background-image: url(../../img/Bandera-de-China.svg);
+    background-color: darkgrey;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    height: 5em;
+    width: 10em;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+}
+
+.themeAmericana {
+    background-image: url(../../img/Bandera-de-Estados-Unidos.svg);
+    background-color: darkgrey;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    height: 5em;
+    width: 10em;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+}
+
+.themeInglesa {
+    background-image: url(../../img/Bandera-de-Reino-Unido.svg);
+    background-color: darkgrey;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    height: 5em;
+    width: 10em;
+    border-radius: 3em; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
 }

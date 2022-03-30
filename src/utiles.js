@@ -1,4 +1,4 @@
-export const raiz = "http://localhost:3000/";
+export const raiz = "https://stormy-savannah-32569.herokuapp.com/";
 
 
 

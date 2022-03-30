@@ -12,6 +12,7 @@ console.log("entro en home");
 // Navegar
 let navigate = useNavigate();
 
+//para nacegar y guardar en redux
 const navegar = (lugar,theme) => {
 
 //Guardamos en REDUX el criterio
@@ -35,13 +36,13 @@ const navegarRegister = () => {
             
             <div className='designHome'>
                 <div className="designThemes">
-                    <div className="themeEspañola" onClick={()=>navegar("/register")}>ESPAÑOLA</div>
-                    <div className="themeFrancia" onClick={()=>navegar("/register")}>FRANCESA</div>
-                    <div className="themeItalia" onClick={()=>navegar("/register")}>ITALIANA</div>
-                    <div className="themeMexico" onClick={()=>navegar("/register")}>MEXICANA</div>
-                    <div className="themeChina" onClick={()=>navegar("/register")}>CHINA</div>
-                    <div className="themeAmericana" onClick={()=>navegar("/register")}>AMERICANA</div>
-                    <div className="themeInglesa" onClick={()=>navegar("/register")}>INGLESA</div>
+                    <div className="themeEspañola" onClick={()=>navegarRegister()}>ESPAÑOLA</div>
+                    <div className="themeFrancia" onClick={()=>navegarRegister()}>FRANCESA</div>
+                    <div className="themeItalia" onClick={()=>navegarRegister()}>ITALIANA</div>
+                    <div className="themeMexico" onClick={()=>navegarRegister()}>MEXICANA</div>
+                    <div className="themeChina" onClick={()=>navegarRegister()}>CHINA</div>
+                    <div className="themeAmericana" onClick={()=>navegarRegister()}>AMERICANA</div>
+                    <div className="themeInglesa" onClick={()=>navegarRegister()}>INGLESA</div>
                 </div>          
             </div>
 

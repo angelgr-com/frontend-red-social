@@ -9,7 +9,7 @@ const createStoreWithMiddleware = applyMiddleware(
  
 const store = createStoreWithMiddleware(
     reducer,
-    load({ states: ['theme', 'modify_credentials', 'login', 'logout','post'] }),
+    load({ states: ['credentials','post'] }),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__({
         trace: true,
     })

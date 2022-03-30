@@ -4,7 +4,7 @@ import reducer from './reducers';
 
 //poner solo los elementos d index de controllers
 const createStoreWithMiddleware = applyMiddleware(
-	save({ states: ['theme', 'modify_credentials','login', 'logout','post' ] })
+	save({ states: ['credentials','post' ] })
 )(createStore);
  
 const store = createStoreWithMiddleware(

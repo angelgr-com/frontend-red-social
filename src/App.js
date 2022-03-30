@@ -12,6 +12,7 @@ import Theme from './Containers/Theme/Theme';
 import AdminUsuario from './Containers/AdminUsuario/AdminUsuario'; 
 import AdminAuth from './Containers/AdminAuth/AdminAuth'; 
 
+
 function App() {
   return (
     <div className="App">
@@ -29,6 +30,7 @@ function App() {
           <Route path="/:theme" element={<Theme/>}/> 
           <Route path="/adminUsuario" element={<AdminUsuario/>}/>
           <Route path="/adminAuth" element={<AdminAuth/>}/>
+          
 
        
        

@@ -1,7 +1,8 @@
-import {POST} from '../types'; 
+import {POST,THEME} from '../types'; 
 
 const initialState = {
-  post: ""
+  post: "",
+  theme: ""
 };
 
 const postReducer = (state = initialState, action) => {
@@ -9,6 +10,10 @@ const postReducer = (state = initialState, action) => {
       //Saves Post
       case POST :
           return action.payload;
+
+      case THEME :
+        return action.payload;
+
 
       default :
           return state

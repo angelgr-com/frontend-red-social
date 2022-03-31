@@ -9,52 +9,53 @@ import { raiz } from "../../utiles";
 
 const Posts = (props) => {
      
-console.log("entro en home");
+console.log("entro en posts");
 
 // Navegar
 let navigate = useNavigate();
 
 const navegar = () => { 
-    navigate("/");
+    navigate("/"); // CONPROBAR LINEA
 }
 
 // Hook
-const [post, setPost] = useState([]);
-
+const [posts, setPosts] = useState([]);
 
 
 //Guardamos en REDUX el post
-props.dispatch({type: POST, payload: post}); 
-
+props.dispatch({type: POST, payload: posts}); 
 
 
 // UseEffect de montaje
-    // useEffect(() => {
-    //     // console.log('')
-    // }, [])
+    useEffect(() => {
+        traePosts();
+    }, [])
 
 
-    // Funcion escoger pelicula
-    const escogePost = (post) => {
+// Funcion escoger post
+const escogePost = (posts) => {
             
-        console.log(post);
-        //Guardamos el post escogido en REDUX al clicar en
-        props.dispatch({type: POST, payload: post});
+    console.log(posts);
+    //Guardamos el post escogido en REDUX al clicar en
+    props.dispatch({type: POST, payload: posts});
 
 
-        //Redirigimos a la vista de detalles Pelicula con navigate
-        // navigate("/detallesPelicula"); 
+    //Redirigimos a la vista de detalles Posts con navigate
+    // navigate("/detallesPelicula"); 
     }
 
-    // Funcion traer peliculas
+// Funcion traer POSTS
 
-    const traePosts = async () => {
+const traePosts = async () => {
+
+console.log("entra en la funcion Trae Posts")
 
         try {
 
-            let resultado = await axios.get("http://localhost:3300/peliculas"); // raiz  + endpoints
+            let resultado = await axios.get("https://stormy-savannah-32569.herokuapp.com/threads/");// CAMBIAR A ENPOINT QUE TRAE POST
             console.log(resultado);
-            setPost(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
+            setPosts(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
+            console.log("posts guardados en hook")
 
 
         } catch (error) {
@@ -62,20 +63,23 @@ props.dispatch({type: POST, payload: post});
         }
     }
 
-    if (post[0] != undefined) {// COMPROBAR
-
+    if (posts[0] != undefined) {// COMPROBAR
+        console.log("array de posts contiene post)")
         // aqui mapeo porque ya las tengo
 
         return (
 
             <div className="designPost">
-
-                {post.map(item => {
-
+                
+                {posts.map(item => {
+console.log("devuelve el mapeo de posts")
                     return (
 
                         <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
-                            
+                            <p className="titulo">{item._id}</p>
+                            <p className="titulo">{item.title}</p>
+                            <p className="titulo">{item.title_url}</p>
+                            <p className="titulo">{item.title}</p>
                         </div>
                     )
                 })

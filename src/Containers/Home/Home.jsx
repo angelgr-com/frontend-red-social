@@ -2,8 +2,6 @@ import { connect } from "react-redux";
 import {useNavigate} from 'react-router-dom';
 import { THEME } from '../../redux/types';
 import './Home.css';
-import { fondo } from '../../redux/types';
-// import fondo from '../../img/fondo';
 
 const Home = (props) => {
      

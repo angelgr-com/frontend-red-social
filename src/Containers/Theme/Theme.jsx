@@ -5,48 +5,32 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import './Theme.css';
 import { POST } from '../../redux/types';
-
+import Thread from '../../Components/Thread/Thread';
+import {raiz} from '../../utiles';
 
 const Theme = (props) => { 
-    console.log("entro en theme", props.theme)
 
-    // Navegar
-    let navigate = useNavigate();
-
-    const navegar = () => {
-        navigate("/detalles"); // AQUI TIENE QUE NAVEGAR A LA VISTA DE DETALLES POST
-    }
 
     // Hook
-    const [posts, setPosts] = useState([])
+    const [theme, setTheme] = useState([])
 
     // Use effect montaje
     useEffect(()=>{
-        traePosts();
+        traeTheme();
     },[]);
 
     // Funcion escoger Post
-   const escogePost = (post) => {
-            
-    console.log(post);
-    //Guardamos el post escogido en REDUX al selecionar el post
-    props.dispatch({type: POST, payload: post});
-    console.log("post guardado en Redux")
 
-
-    //Redirigimos a la vista de detalles Post con navigate
-    navigate("/detallesPost"); 
-   };
 
 
     // Funcion que trae posts segun el tema 
-    const traePosts = async () => {
+    const traeTheme = async () => {
         
         try {
 
-            let resultado = await axios.get(`http://localhost:3300/theme/${props.theme}`); 
+            let resultado = await axios.get(raiz+`/threads/theme/${props.post?.theme}`); 
             console.log("posts llegados de backend")
-            setPosts(resultado.data);
+            setTheme(resultado.data);
             console.log("posts guardados en Hook")
            
 
@@ -56,41 +40,24 @@ const Theme = (props) => {
 
     };
 
-    if (posts[0]?.id != undefined)  {
-
-
     return(
         
-           <div className="designTheme">
-                <div className="contenidoPosts">
+        <div className="designTheme">
+            <div className="contenidoPosts">
 
-                    {posts.map(item => {
+                {posts.map(item => {
 
-                        return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
+                    return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
 
-                            <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
-                                <p className="post">{item.texto}</p>
-                            </div>
-                        )
+                        <Thread/>
+                    )
 
-                    })
-                    }
-                 </div>
-            </div>   
+                })
+                }
+            </div>
+        </div>   
             
     ) 
-  
-
-} else {
-
-    return (
-
-        <div className="contenidoPosts2">
-            hola soy ${props.theme}
-        </div>
-    );
-}
-
 
 };
 

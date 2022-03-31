@@ -52,13 +52,7 @@ const Register = (props) => {
         
         // //1 comprobación de errores antes de enviar al backend
 
-        if(datosUser.password !== datosUser.password2){ 
 
-            return (setMsgError("Los dos password deben de coincidir"));
-
-        }else{
-            setMsgError("");
-        }
 
         for(let elemento of arrayCampos){
             error = checkError(elemento[0],elemento[1]);
@@ -108,13 +102,12 @@ const Register = (props) => {
                 <div className="upCardRegister">FORMULARIO DE REGISTRO</div>
                 <div className="middleCardRegister">
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
-                    <input className='inputRegister' type="text" name="nombre" id="nombre" title="nombre" placeholder="Nombre:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input className='inputRegister' type="text" name="apellido" id="apellido" title="apellido" placeholder="Apellido:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input className='inputRegister' type="text" name="edad" id="edad" title="edad" placeholder="Edad:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input className='inputRegister' type="email" name="email" id="email" title="email" placeholder="Correo Electrónico:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input className='inputRegister' type="nickname" name="nickname" id="nickname" title="nickname" placeholder="Nickname:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='inputRegister' type="text" name="name" id="name" title="name" placeholder="name:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='inputRegister' type="text" name="nickname" id="nickname" title="nickname" placeholder="nickname:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='inputRegister' type="text" name="email" id="email" title="email" placeholder="email:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                  
                     <input className='inputRegister' type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input className='inputRegister'  type="password" name="password2" id="password2" title="password2" placeholder="Repite contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='inputRegister'  type="text" name="avatar" id="avatar" title="avatar" placeholder="avatar" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                    
                 </div>
                 <div className="bottomCardRegister">

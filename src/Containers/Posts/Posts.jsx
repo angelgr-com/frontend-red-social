@@ -76,10 +76,21 @@ console.log("devuelve el mapeo de posts")
                     return (
 
                         <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
-                            <p className="titulo">{item._id}</p>
-                            <p className="titulo">{item.title}</p>
-                            <p className="titulo">{item.title_url}</p>
-                            <p className="titulo">{item.title}</p>
+                          <div className="containerPostUp">
+                              <div className="theme"> THEME</div>
+                          </div>
+                          <div className="containerPostDown">
+                              <div className="containerPostDownGlobal">
+                                  <div className="containerPostDownGlobalLeft">
+                                      <div className="nickname">NICK NAME</div>
+                                  </div>
+                                  <div className="containerPostDownGlobalRight">
+                                      <div className="containerPostDownGlobalRightUp">TITLE</div>
+                                      <div className="containerPostDownGlobalRightMiddle">CONTENT</div>
+                                      <div className="containerPostDownGlobalRightRight"></div>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                     )
                 })
@@ -115,3 +126,9 @@ console.log("devuelve el mapeo de posts")
 export default connect((state) => ({
     post: state.post
 }))(Posts);
+
+
+{/* <p className="titulo">{item._id}</p>
+                            <p className="titulo">{item.title}</p>
+                            <p className="titulo">{item.title_url}</p>
+                            <p className="titulo">{item.title}</p> */}

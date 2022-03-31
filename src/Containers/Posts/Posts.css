@@ -1,22 +1,107 @@
 .designPost {
     background-color: lightgray;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     row-gap: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    padding: 2em;
     
 }
 
 .itemPost {
-    height: 15em;
-    width: 80%;
+    height: 20em;
+    width: 80em;
     background-color: aqua;
-    border: 1px solid black;
     row-gap: 2em;
+    border: 1px solid black;
+    
 }
+
+.containerPostUp {
+    height: 4em;
+    width: 100%;    
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+}
+
+.containerPostDown {
+    height: 16em;
+    width: 100%;    
+    background-color: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.theme {
+    height: 3em;
+    width: 100%;
+    background-color: lightcoral;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.containerPostDownGlobal {
+    height: 15em;
+    width: 99%;
+    background-color: darkred;
+    display: flex;
+    
+}
+
+.containerPostDownGlobalLeft {
+    height: 100%;
+    width: 20%;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    
+}
+
+.nickname {
+    height: 15%;
+    width: 98%;
+    background-color: lightcoral;
+    border: 1px solid black;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerPostDownGlobalRight {
+    height: 100%;
+    width: 80%;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.containerPostDownGlobalRightUp {
+    height: 10%;
+    width: 100%;
+    background-color: lightcoral;
+    margin-right: 1em;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerPostDownGlobalRightMiddle {
+    height: 60%;
+    width: 100%;
+    background-color: lightcoral;
+    margin-right: 1em;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

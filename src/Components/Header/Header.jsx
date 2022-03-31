@@ -95,12 +95,12 @@ const Header = (props) => {
                         </div>
                         <div className="headerSpace linksDesign">
                             {
-                                (props.credentials?.usuario.rol === true) && (window.location.pathname === "/admin") &&
+                                (props.credentials?.user.isAdmin === true) && (window.location.pathname === "/admin") &&
                                 <div className="link" onClick={() => navegar("/admin")}><b>Admin</b></div>
 
                             }
                             {
-                                (props.credentials?.usuario.rol === true) && (window.location.pathname !== "/admin") &&
+                                (props.credentials?.user.isAdmin === true) && (window.location.pathname !== "/admin") &&
                                 <div className="link" onClick={() => navegar("/admin")}>Admin</div>
                             }
 
@@ -108,13 +108,13 @@ const Header = (props) => {
                             {
                                 (window.location.pathname === "/profile") &&
                                 <div className="link" onClick={() => navegar("/profile")}>
-                                    <b>{props.credentials?.usuario.nombre}</b>
+                                    <b>{props.credentials?.user.name}</b>
                                 </div>
                             }
                             {
                                 (window.location.pathname !== "/profile") &&
                                 <div className="link" onClick={() => navegar("/profile")}>
-                                    {props.credentials?.usuario.nombre}
+                                    {props.credentials?.user.name}
                                 </div>
                             }
                             {

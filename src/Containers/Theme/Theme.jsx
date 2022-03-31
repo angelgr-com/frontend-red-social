@@ -29,9 +29,9 @@ const Theme = (props) => {
         try {
 
             let resultado = await axios.get(raiz+`/threads/theme/${props.post?.theme}`); 
-            console.log("posts llegados de backend")
+            console.log("themes llegados de backend")
             setTheme(resultado.data);
-            console.log("posts guardados en Hook")
+            console.log(resultado.data)
            
 
         } catch (error) {
@@ -45,11 +45,12 @@ const Theme = (props) => {
         <div className="designTheme">
             <div className="contenidoPosts">
 
-                {posts.map(item => {
-
+                {theme.map(item => {
+                    console.log("item")
+                    console.log(item)
                     return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
 
-                        <Thread/>
+                        <Thread theme={item}/>
                     )
 
                 })

@@ -11,6 +11,7 @@ import Profile from './Containers/Profile/Profile';
 import Theme from './Containers/Theme/Theme'; 
 import AdminUsuario from './Containers/AdminUsuario/AdminUsuario'; 
 import AdminAuth from './Containers/AdminAuth/AdminAuth'; 
+import Posts from './Containers/Posts/Posts'; 
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
           <Route path="/:theme" element={<Theme/>}/> 
           <Route path="/adminUsuario" element={<AdminUsuario/>}/>
           <Route path="/adminAuth" element={<AdminAuth/>}/>
-          
+          <Route path="/posts" element={<Posts/>}/>
+
 
        
        

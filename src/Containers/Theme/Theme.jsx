@@ -6,6 +6,7 @@ import axios from 'axios';
 import './Theme.css';
 import { POST } from '../../redux/types';
 import Thread from '../../Components/Thread/Thread';
+import {raiz} from '../../utiles';
 
 const Theme = (props) => { 
 
@@ -15,7 +16,7 @@ const Theme = (props) => {
 
     // Use effect montaje
     useEffect(()=>{
-        traePosts();
+        traeTheme();
     },[]);
 
     // Funcion escoger Post
@@ -23,13 +24,13 @@ const Theme = (props) => {
 
 
     // Funcion que trae posts segun el tema 
-    const traePosts = async () => {
+    const traeTheme = async () => {
         
         try {
 
-            let resultado = await axios.get(raiz+`/${props.theme}`); 
+            let resultado = await axios.get(raiz+`/threads/theme/${props.post?.theme}`); 
             console.log("posts llegados de backend")
-            setPosts(resultado.data);
+            setTheme(resultado.data);
             console.log("posts guardados en Hook")
            
 

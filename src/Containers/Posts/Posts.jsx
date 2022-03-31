@@ -22,27 +22,13 @@ const navegar = () => {
 const [posts, setPosts] = useState([]);
 
 
-//Guardamos en REDUX el post
-props.dispatch({type: POST, payload: posts}); 
-
-
 // UseEffect de montaje
     useEffect(() => {
         traePosts();
     }, [])
 
 
-// Funcion escoger post
-const escogePost = (posts) => {
-            
-    console.log(posts);
-    //Guardamos el post escogido en REDUX al clicar en
-    props.dispatch({type: POST, payload: posts});
 
-
-    //Redirigimos a la vista de detalles Posts con navigate
-    // navigate("/detallesPelicula"); 
-    }
 
 // Funcion traer POSTS
 
@@ -63,7 +49,7 @@ console.log("entra en la funcion Trae Posts")
         }
     }
 
-    if (posts[0] != undefined) {// COMPROBAR
+    if (posts[0] !== undefined) {
         console.log("array de posts contiene post)")
         // aqui mapeo porque ya las tengo
 
@@ -75,6 +61,7 @@ console.log("entra en la funcion Trae Posts")
 console.log("devuelve el mapeo de posts")
                     return (
 
+<<<<<<< HEAD
                         <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
                           <div className="containerPostUp">
                               <div className="theme"> THEME</div>
@@ -91,6 +78,13 @@ console.log("devuelve el mapeo de posts")
                                   </div>
                               </div>
                           </div>
+=======
+                        <div className="itemPost" key={item.id}  >
+                            <p className="titulo">{item._id}</p>
+                            <p className="titulo">{item.title}</p>
+                            <p className="titulo">{item.title_url}</p>
+                            <p className="titulo">{item.title}</p>
+>>>>>>> 01d35afff8ec9954de0499c5e3b2b9073060b38c
                         </div>
                     )
                 })

@@ -40,7 +40,7 @@ const Theme = (props) => {
         }
 
     };
-
+ 
     let navigate = useNavigate();
     const newThread = () => {
 

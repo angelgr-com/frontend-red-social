@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import { POST } from '../../redux/types';
+// import { POST } from '../../redux/types';
 import './Posts.css';
 import axios from 'axios';
-import { raiz } from "../../utiles";
+// import { raiz } from "../../utiles";
 
 
 const Posts = (props) => {
@@ -38,7 +38,7 @@ const Posts = (props) => {
 
         try {
 
-            let resultado = await axios.get("https://stormy-savannah-32569.herokuapp.com/threads/");// CAMBIAR A ENPOINT QUE TRAE POST
+            let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/theme/${props.post}`);
             console.log(resultado);
             setPosts(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
             console.log("posts guardados en hook")
@@ -61,21 +61,22 @@ const Posts = (props) => {
                         return (
                             <div className="itemPost" key={item.id}>
                                 <div className="containerPostUp">
-                                    <div className="theme"> {item.theme}</div>
+                                    <div className="themePosts"> {item.theme}</div>
+                                    
                                 </div>
                                 
                                 <div className="containerPostDown">
                                     <div className="containerPostDownGlobal">
                                         <div  className="containerPostDownGlobalLeft">
-                                            <div className="nickname">{item.nickname}</div>
-                                            <div className="avatar">{item.avatar}</div>
+                                            <div className="nickname"> NICKNAME{item.nickname}</div>
+                                            <div className="avatar">AVATAR{item.avatar}</div>
                                         </div>
                                         <div className="containerPostDownGlobalRight">
                                             <div className="containerPostDownGlobalRightUp">{item.title}</div>
-                                            <div className="containerPostDownGlobalRightMiddle">{item.content}</div>
+                                            <div className="containerPostDownGlobalRightMiddle">{item.posts[0].content}</div>
                                             <div className="containerPostDownGlobalRightDown">
-                                                <div className="containerPostDownGlobalRightDownLike">{item.likes}</div>
-                                                <div className="containerPostDownGlobalRightDownDate">{item.date}</div>
+                                                <div className="containerPostDownGlobalRightDownLike"> Likes {item.posts[0].likes.length}</div>
+                                                <div className="containerPostDownGlobalRightDownDate">{item.posts[0].date}</div>
                                                 <div className="containerPostDownGlobalRightDownEmpty">EMPTY</div>
                                             </div>
                                         </div>

@@ -13,53 +13,62 @@
 .itemPost {
     height: 20em;
     width: 80em;
-    background-color: aqua;
+    /* background-color: aqua; */
     row-gap: 2em;
     border: 1px solid black;
     
 }
 
 .containerPostUp {
-    height: 4em;
+    height: 3em;
     width: 100%;    
-    background-color: lightblue;
+    background-color: darkgray;
     display: flex;
     align-items: center;
 }
 
 .containerPostDown {
-    height: 16em;
+    height: 17em;
     width: 100%;    
-    background-color: darkgrey;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /* column-gap: 2em; */
 }
 
-.theme {
-    height: 3em;
+.themePosts {
+    height: 2em;
     width: 10%;
     background-color: lightcoral;
     margin-left: 1em;
     margin-right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
 }
 
 .containerPostDownGlobal {
     height: 15em;
     width: 99%;
-    background-color: darkred;
+    /* background-color: darkred; */
     display: flex;
+    justify-content: space-around;
+    column-gap: 1em;
     
 }
 
 .containerPostDownGlobalLeft {
     height: 100%;
     width: 20%;
-    background-color: white;
+    background-color: lightgrey;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
+    
     
 }
 
@@ -75,7 +84,7 @@
 }
 
 .avatar {
-    height: 30%;
+    height: 60%;
     width: 95%;
     background-color: lightcoral;
     border: 1px solid black;
@@ -90,11 +99,12 @@
 .containerPostDownGlobalRight {
     height: 100%;
     width: 80%;
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: space-around;
+    /* border: 1px solid black; */
 }
 
 .containerPostDownGlobalRightUp {
@@ -106,6 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
 }
 
 .containerPostDownGlobalRightMiddle {
@@ -117,33 +128,47 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
 }
 
 .containerPostDownGlobalRightDown {
     height: 10%;
     width: 95%;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     margin-right: 1em;
     margin-left: 1em;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /* border: 1px solid black; */
 }
 
 .containerPostDownGlobalRightDownLike {
     height: 100%;
     width: 30%;
-    background-color: brown;
+    background-color: lightcoral;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .containerPostDownGlobalRightDownDate {
     height: 100%;
     width: 30%;
-    background-color: brown;
+    background-color: lightcoral;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .containerPostDownGlobalRightDownEmpty {
     height: 100%;
     width: 30%;
-    background-color: brown;
+    background-color: lightcoral;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -44,7 +44,7 @@ const Header = (props) => {
 }
 
  
-
+ 
 
 export default connect((state) => ({
     post: state.post

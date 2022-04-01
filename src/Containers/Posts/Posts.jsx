@@ -61,18 +61,23 @@ const Posts = (props) => {
                         return (
                             <div className="itemPost" key={item.id}>
                                 <div className="containerPostUp">
-                                    <div className="theme"> THEME</div>
+                                    <div className="theme"> {item.theme}</div>
                                 </div>
                                 
                                 <div className="containerPostDown">
                                     <div className="containerPostDownGlobal">
                                         <div  className="containerPostDownGlobalLeft">
-                                            <div className="nickname">NICK NAME</div>
+                                            <div className="nickname">{item.nickname}</div>
+                                            <div className="avatar">{item.avatar}</div>
                                         </div>
                                         <div className="containerPostDownGlobalRight">
-                                            <div className="containerPostDownGlobalRightUp">TITLE</div>
-                                            <div className="containerPostDownGlobalRightMiddle">CONTENT</div>
-                                            <div className="containerPostDownGlobalRightRight"></div>
+                                            <div className="containerPostDownGlobalRightUp">{item.title}</div>
+                                            <div className="containerPostDownGlobalRightMiddle">{item.content}</div>
+                                            <div className="containerPostDownGlobalRightDown">
+                                                <div className="containerPostDownGlobalRightDownLike">{item.likes}</div>
+                                                <div className="containerPostDownGlobalRightDownDate">{item.date}</div>
+                                                <div className="containerPostDownGlobalRightDownEmpty">EMPTY</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -44,7 +44,7 @@ const Theme = (props) => {
     let navigate = useNavigate();
     const newThread = () => {
 
-
+ 
         //Guardamos el post escogido en REDUX al selecionar el post
         //Redirigimos a la vista de detalles Post con navigate
         navigate("/newThread");

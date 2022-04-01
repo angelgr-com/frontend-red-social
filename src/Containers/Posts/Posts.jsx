@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import {useNavigate} from 'react-router-dom';
-import React, { useState, useEffect } from 'react'; 
+import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { POST } from '../../redux/types';
 import './Posts.css';
 import axios from 'axios';
@@ -8,21 +8,21 @@ import { raiz } from "../../utiles";
 
 
 const Posts = (props) => {
-     
-console.log("entro en posts");
 
-// Navegar
-let navigate = useNavigate();
+    console.log("entro en posts");
 
-const navegar = () => { 
-    navigate("/"); // CONPROBAR LINEA
-}
+    // Navegar
+    let navigate = useNavigate();
 
-// Hook
-const [posts, setPosts] = useState([]);
+    const navegar = () => {
+        navigate("/"); // CONPROBAR LINEA
+    }
+
+    // Hook
+    const [posts, setPosts] = useState([]);
 
 
-// UseEffect de montaje
+    // UseEffect de montaje
     useEffect(() => {
         traePosts();
     }, [])
@@ -30,11 +30,11 @@ const [posts, setPosts] = useState([]);
 
 
 
-// Funcion traer POSTS
+    // Funcion traer POSTS
 
-const traePosts = async () => {
+    const traePosts = async () => {
 
-console.log("entra en la funcion Trae Posts")
+        console.log("entra en la funcion Trae Posts")
 
         try {
 
@@ -52,65 +52,45 @@ console.log("entra en la funcion Trae Posts")
     if (posts[0] !== undefined) {
         console.log("array de posts contiene post)")
         // aqui mapeo porque ya las tengo
-
         return (
-
             <div className="designPost">
-                
-                {posts.map(item => {
-console.log("devuelve el mapeo de posts")
-                    return (
+                {posts.map(
+                    item => {
+                        console.log("devuelve el mapeo de posts")
 
-<<<<<<< HEAD
-                        <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
-                          <div className="containerPostUp">
-                              <div className="theme"> THEME</div>
-                          </div>
-                          <div className="containerPostDown">
-                              <div className="containerPostDownGlobal">
-                                  <div className="containerPostDownGlobalLeft">
-                                      <div className="nickname">NICK NAME</div>
-                                  </div>
-                                  <div className="containerPostDownGlobalRight">
-                                      <div className="containerPostDownGlobalRightUp">TITLE</div>
-                                      <div className="containerPostDownGlobalRightMiddle">CONTENT</div>
-                                      <div className="containerPostDownGlobalRightRight"></div>
-                                  </div>
-                              </div>
-                          </div>
-=======
-                        <div className="itemPost" key={item.id}  >
-                            <p className="titulo">{item._id}</p>
-                            <p className="titulo">{item.title}</p>
-                            <p className="titulo">{item.title_url}</p>
-                            <p className="titulo">{item.title}</p>
->>>>>>> 01d35afff8ec9954de0499c5e3b2b9073060b38c
-                        </div>
-                    )
-                })
-                }
-
-
+                        return (
+                            <div className="itemPost" key={item.id}>
+                                <div className="containerPostUp">
+                                    <div className="theme"> THEME</div>
+                                </div>
+                                
+                                <div className="containerPostDown">
+                                    <div className="containerPostDownGlobal">
+                                        <div  className="containerPostDownGlobalLeft">
+                                            <div className="nickname">NICK NAME</div>
+                                        </div>
+                                        <div className="containerPostDownGlobalRight">
+                                            <div className="containerPostDownGlobalRightUp">TITLE</div>
+                                            <div className="containerPostDownGlobalRightMiddle">CONTENT</div>
+                                            <div className="containerPostDownGlobalRightRight"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }
+                )}
             </div>
         )
-
     } else {
-
         return (
-
             <div className="diseñopost2">
-
                 <div className="contenedorPost2">
-                     
-                     NO HAY NINGUN POST SOBRE ESTE TEMA
-
+                    NO HAY NINGUN POST SOBRE ESTE TEMA
                 </div>
-
             </div>
         );
     }
-
-
 }
 
 

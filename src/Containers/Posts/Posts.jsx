@@ -52,66 +52,45 @@ const Posts = (props) => {
     if (posts[0] !== undefined) {
         console.log("array de posts contiene post)")
         // aqui mapeo porque ya las tengo
-
         return (
-
             <div className="designPost">
-{/* 
-                {
-                posts.map(item => {
-                    console.log("devuelve el mapeo de posts")
-                    return (
-                    
-                        <div className="itemPost" key={item.id} onClick={()=>escogePost(item)} >
-                          <div className="containerPostUp">
-                              <div className="theme"> THEME</div>
-                          </div>
-                          <div className="containerPostDown">
-                              <div className="containerPostDownGlobal">
-                                  <div className="containerPostDownGlobalLeft">
-                                      <div className="nickname">NICK NAME</div>
-                                  </div>
-                                  <div className="containerPostDownGlobalRight">
-                                      <div className="containerPostDownGlobalRightUp">TITLE</div>
-                                      <div className="containerPostDownGlobalRightMiddle">CONTENT</div>
-                                      <div className="containerPostDownGlobalRightRight"></div>
-                                  </div>
-                              </div>
-                          </div>
+                {posts.map(
+                    item => {
+                        console.log("devuelve el mapeo de posts")
 
-                        <div className="itemPost" key={item.id}  >
-                            <p className="titulo">{item._id}</p>
-                            <p className="titulo">{item.title}</p>
-                            <p className="titulo">{item.title_url}</p>
-                            <p className="titulo">{item.title}</p>
-
-                        </div>
-                    )
-                }
-                }                   
-                 */}
-
-
+                        return (
+                            <div className="itemPost" key={item.id}>
+                                <div className="containerPostUp">
+                                    <div className="theme"> THEME</div>
+                                </div>
+                                
+                                <div className="containerPostDown">
+                                    <div className="containerPostDownGlobal">
+                                        <div  className="containerPostDownGlobalLeft">
+                                            <div className="nickname">NICK NAME</div>
+                                        </div>
+                                        <div className="containerPostDownGlobalRight">
+                                            <div className="containerPostDownGlobalRightUp">TITLE</div>
+                                            <div className="containerPostDownGlobalRightMiddle">CONTENT</div>
+                                            <div className="containerPostDownGlobalRightRight"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }
+                )}
             </div>
         )
-
     } else {
-
         return (
-
             <div className="diseñopost2">
-
                 <div className="contenedorPost2">
-
                     NO HAY NINGUN POST SOBRE ESTE TEMA
-
                 </div>
-
             </div>
         );
     }
-
-
 }
 
 
@@ -122,3 +101,8 @@ export default connect((state) => ({
     post: state.post
 }))(Posts);
 
+
+{/* <p className="titulo">{item._id}</p>
+                            <p className="titulo">{item.title}</p>
+                            <p className="titulo">{item.title_url}</p>
+                            <p className="titulo">{item.title}</p> */}

@@ -16,7 +16,7 @@ const Theme = (props) => {
 
     // Use effect montaje
     useEffect(()=>{
-        traeTheme();
+        bringTheme();
     },[]);
 
     // Funcion escoger Post
@@ -25,7 +25,7 @@ const Theme = (props) => {
 
 
     // Funcion que trae posts segun el tema 
-    const traeTheme = async () => {
+    const bringTheme = async () => {
         
         try {
 

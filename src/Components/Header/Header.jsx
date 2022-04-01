@@ -53,7 +53,7 @@ const Header = (props) => {
 
                 <div className="headerSpace logoDesign">
 
-                    <img className="logo" src={require('../../img/fondo.jpg')} alt="logo" onClick={() => navegar("/")}></img>
+                    <img className="logo" src={require('../../img/logo.png')} alt="logo" onClick={() => navegar("/")}></img>
 
                 </div>
                 <div className="headerSpace searchDesign">
@@ -79,7 +79,11 @@ const Header = (props) => {
             </div>
         )
     } else {
+        console.log("props.credentials");     
+
+        console.log(props.credentials);     
         return (
+            
             <div className='designHeaderGlobal'>
                 {
                     
@@ -96,26 +100,23 @@ const Header = (props) => {
                         </div>
                         <div className="headerSpace linksDesign">
                             {
-                                (props.credentials?.user.isAdmin === true) && (window.location.pathname === "/admin") &&
+                                (props.credentials?.isAdmin === true) && (window.location.pathname === "/admin") &&
                                 <div className="link" onClick={() => navegar("/admin")}><b>Admin</b></div>
-
                             }
                             {
-                                (props.credentials?.user.isAdmin === true) && (window.location.pathname !== "/admin") &&
+                                (props.credentials?.isAdmin === true) && (window.location.pathname !== "/admin") &&
                                 <div className="link" onClick={() => navegar("/admin")}>Admin</div>
                             }
-
-                        
                             {
                                 (window.location.pathname === "/profile") &&
                                 <div className="link" onClick={() => navegar("/profile")}>
-                                    <b>{props.credentials?.user.name}</b>
+                                    <b>{props.credentials?.name}</b>
                                 </div>
                             }
                             {
                                 (window.location.pathname !== "/profile") &&
                                 <div className="link" onClick={() => navegar("/profile")}>
-                                    {props.credentials?.user.name}
+                                    {props.credentials?.name}
                                 </div>
                             }
                             {

@@ -36,7 +36,7 @@ const Header = (props) => {
     // console.log(window.location.pathname);
     return (
 
-        // <div className="itemPost" key={item.id}  >
+        // <div className="itemThread" key={item.id}  >
         //     <p className="titulo">{item._id}</p>
         //     <p className="titulo">{item.title}</p>
         //     <p className="titulo">{item.title_url}</p>

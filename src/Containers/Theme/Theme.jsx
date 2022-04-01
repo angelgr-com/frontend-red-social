@@ -20,7 +20,8 @@ const Theme = (props) => {
     },[]);
 
     // Funcion escoger Post
-
+    console.log("eeeeeeeeeeee")
+    console.log(props)
 
 
     // Funcion que trae posts segun el tema 
@@ -28,7 +29,7 @@ const Theme = (props) => {
         
         try {
 
-            let resultado = await axios.get(raiz+`/threads/theme/${props.post?.theme}`); 
+            let resultado = await axios.get(raiz+`/threads/theme/${props.post}`); 
             console.log("themes llegados de backend")
             setTheme(resultado.data);
             console.log(resultado.data)
@@ -50,7 +51,7 @@ const Theme = (props) => {
                     console.log(item)
                     return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
 
-                        <Thread theme={item}/>
+                        <Thread key={item._id} theme={item}/>
                     )
 
                 })
@@ -63,5 +64,6 @@ const Theme = (props) => {
 };
 
 export default connect((state) => ({
-    theme: state.theme
+    post: state.post,
+    credentials: state.credentials
 }))(Theme);

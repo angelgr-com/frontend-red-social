@@ -28,7 +28,7 @@ const navegarRegister = () => {
     //     // console.log('')
     // }, [])
 
-    if(props.credentials?.token !== undefined){
+    if(props.credentials?.token === undefined){
         console.log("NO tengo token");
         return(
             
@@ -47,7 +47,7 @@ const navegarRegister = () => {
         )
    
     } else {
-        console.log("SI tengo token", props.credentials.token);
+        console.log("estas son las credenciales", props.credentials);
         return(
             
             <div className='designHome'>
@@ -69,5 +69,6 @@ const navegarRegister = () => {
 
 
 export default connect((state) => ({
-    credentials: state.credentials
+    credentials: state.credentials,
+    post:state.post
 }))(Home);

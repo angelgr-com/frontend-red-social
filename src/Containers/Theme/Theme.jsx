@@ -41,13 +41,26 @@ const Theme = (props) => {
 
     };
 
+    let navigate = useNavigate();
+    const newThread = () => {
+
+
+        //Guardamos el post escogido en REDUX al selecionar el post
+        //Redirigimos a la vista de detalles Post con navigate
+        navigate("/newThread");
+    };
+
     return(
         
         <div className="designTheme">
+            <div className="topSectionTheme">
+            <div className="itemTheme">Threads about {props.post}</div>
+            <div className="itemButton" onClick={()=>newThread()} >New post</div>
+            </div>
             <div className="contenidoPosts">
 
                 {theme.map(item => {
-                    console.log("item")
+                    console.log("item  uuuuuu")
                     console.log(item)
                     return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
 
@@ -56,6 +69,7 @@ const Theme = (props) => {
 
                 })
                 }
+
             </div>
         </div>   
             

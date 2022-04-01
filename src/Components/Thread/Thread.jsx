@@ -15,7 +15,7 @@ const Header = (props) => {
     console.log("esto hereda el hijo", props)
     // Navegar
     let navigate = useNavigate();
-    const escogePost = () => {
+    const choosePost = () => {
 
 
         //Guardamos el post escogido en REDUX al selecionar el post
@@ -30,7 +30,7 @@ const Header = (props) => {
     // console.log(window.location.pathname);
     return (
 
-        <div className="itemThread" key={props.theme._id} onClick={()=>escogePost()} >
+        <div className="itemThread" key={props.theme._id} onClick={()=>choosePost()} >
             <div className="author">{props.theme.posts[0].author}</div>
             <div className="title">{props.theme.title}</div>
             <div className="likes">Likes: {props.theme.posts[0].likes.length}</div>
@@ -43,7 +43,7 @@ const Header = (props) => {
     )
 }
 
- 
+  
  
 
 export default connect((state) => ({

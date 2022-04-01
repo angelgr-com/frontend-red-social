@@ -11,7 +11,7 @@ import './Thread.css';
 import moment from 'moment';
 
 const Header = (props) => {
-
+ 
     console.log("esto hereda el hijo", props)
     // Navegar
     let navigate = useNavigate();

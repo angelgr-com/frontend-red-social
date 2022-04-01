@@ -82,6 +82,7 @@ const Header = (props) => {
         return (
             <div className='designHeaderGlobal'>
                 {
+                    
                     window.location.pathname !== "/display" &&
 
                     <div className='designHeader'>
@@ -129,16 +130,7 @@ const Header = (props) => {
 
                     </div>
                 }
-                {
-                    window.location.pathname === "/display" &&
-                    (
-
-                        <div className="headerSpace logoDesign">
-                            <img className="logoDisplay" src={require('../../img/fondo.jpg')} alt="logo" onClick={() => navegar("/film")}></img>
-                        </div>
-
-                    )
-                }
+            
             </div>
 
         )

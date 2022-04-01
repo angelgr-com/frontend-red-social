@@ -57,14 +57,15 @@
     width: 20%;
     background-color: white;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     
 }
 
 .nickname {
     height: 15%;
-    width: 98%;
+    width: 95%;
     background-color: lightcoral;
     border: 1px solid black;
     margin-top: 1em;
@@ -72,6 +73,19 @@
     align-items: center;
     justify-content: center;
 }
+
+.avatar {
+    height: 30%;
+    width: 95%;
+    background-color: lightcoral;
+    border: 1px solid black;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+
 
 .containerPostDownGlobalRight {
     height: 100%;
@@ -85,7 +99,7 @@
 
 .containerPostDownGlobalRightUp {
     height: 10%;
-    width: 100%;
+    width: 95%;
     background-color: lightcoral;
     margin-right: 1em;
     margin-left: 1em;
@@ -96,7 +110,7 @@
 
 .containerPostDownGlobalRightMiddle {
     height: 60%;
-    width: 100%;
+    width: 95%;
     background-color: lightcoral;
     margin-right: 1em;
     margin-left: 1em;
@@ -105,3 +119,31 @@
     justify-content: center;
 }
 
+.containerPostDownGlobalRightDown {
+    height: 10%;
+    width: 95%;
+    background-color: lightcoral;
+    margin-right: 1em;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.containerPostDownGlobalRightDownLike {
+    height: 100%;
+    width: 30%;
+    background-color: brown;
+}
+
+.containerPostDownGlobalRightDownDate {
+    height: 100%;
+    width: 30%;
+    background-color: brown;
+}
+
+.containerPostDownGlobalRightDownEmpty {
+    height: 100%;
+    width: 30%;
+    background-color: brown;
+}

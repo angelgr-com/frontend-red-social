@@ -114,7 +114,7 @@ const Profile = (props) => {
             setFollowers(resultado.data);
             console.log("usuario actualizado guardado en Hook")
 
-
+ 
 
         } catch (error) {
             console.log(error)

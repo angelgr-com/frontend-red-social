@@ -25,7 +25,7 @@ const Posts = (props) => {
 
     // Hook
     const [posts, setPosts] = useState([]);
-
+ 
 
     // UseEffect de montaje
     useEffect(() => {

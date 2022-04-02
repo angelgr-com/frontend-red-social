@@ -78,7 +78,7 @@ const Profile = (props) => {
     }
 
     if(props.credentials?.token !== undefined) {
-
+ 
     return (
         <div className="designProfile">
             <div className="designProfileInputs">

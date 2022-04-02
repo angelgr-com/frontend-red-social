@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import './Posts.css';
 import axios from 'axios';
-
+import { raiz } from '../../utiles';
 
 
 const Posts = (props) => {
@@ -25,6 +25,8 @@ const Posts = (props) => {
 
     // Hook
     const [posts, setPosts] = useState([]);
+    const [likes, setLikes] = useState([]);
+    const [seguir, setSeguir] = useState([]);
  
 
     // UseEffect de montaje
@@ -66,9 +68,13 @@ const Posts = (props) => {
             // console.log("props.post")
             console.log(`e${props.post}e`);
             let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/comments/all/${props.post}`);
+            // let resultado2 = await axios.get(`https://stormy-savannah-32569.herokuapp.comthreads/likes/0/${props.post}`);
+            
+            // resultado.data.likes=resultado2
             console.log("resultado.data")
-            console.log(resultado.data);
-            setPosts(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
+
+            console.log(resultado);
+            setPosts(resultado.data);// SE GUARDA EL RESULTADO EN EL HOOK
             console.log("posts guardados en hook")
 
 
@@ -76,6 +82,58 @@ const Posts = (props) => {
             console.log(error);
         }
     }
+
+    const daLike = async () => {
+
+        console.log("entra en la funcion Trae Posts")
+
+        try {
+            
+            // props.post.text1.replace(/ /g, ""); 
+            // console.log("props.post")
+            // console.log("e",props.post,"e");
+            // console.log(typeof(props.post))
+            // props.post.replace(/ /g, ""); 
+            // console.log("props.post")
+            console.log(`e${props.post}e`);
+            let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/likes/0/${props.post}`);
+            console.log("resultado.data000000")
+            console.log(resultado);
+            console.log("posts guardados en hook")
+            setLikes(resultado); // SE GUARDA EL RESULTADO EN EL HOOK
+            
+
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    const sigue = async (a) => {
+
+        console.log("entra en la funcion Trae Posts")
+
+        try {
+            
+            // props.post.text1.replace(/ /g, ""); 
+            // console.log("props.post")
+            // console.log("e",props.post,"e");
+            // console.log(typeof(props.post))
+            // props.post.replace(/ /g, ""); 
+            // console.log("props.post")
+            console.log(props.credentials.name);
+            console.log(a);
+            let resultado = await axios.put(raiz+`/users/${a}/add-follower/${props.credentials.name}`);
+            console.log("resultado.data")
+            console.log(resultado);
+            setSeguir(resultado); // SE GUARDA EL RESULTADO EN EL HOOK
+            console.log("posts guardados en hook")
+
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
 
     if (posts !== undefined) {
         console.log("array de posts contiene post)")
@@ -89,8 +147,7 @@ const Posts = (props) => {
                 </div>
                 {posts.map(
                     item => {
-                        console.log("devuelve el mapeo de posts")
-   
+
                         return (
                             <div className="itemPost" key={item._id}>
                                 <div className="containerPostUp">
@@ -102,6 +159,8 @@ const Posts = (props) => {
                                     <div className="containerPostDownGlobal">
                                         <div  className="containerPostDownGlobalLeft">
                                             <div className="nickname"> NICKNAME{item.author}</div>
+                                            <div className="itemButton" onClick={()=>daLike()} >Like</div> 
+                                            <div className="itemButton" onClick={()=>sigue(item.author)} >Seguir</div> 
                                             {/* <div className="avatar">AVATAR{item.avatar}</div> */}
                                         </div>
                                         <div className="containerPostDownGlobalRight">
@@ -140,7 +199,8 @@ const Posts = (props) => {
 
 
 export default connect((state) => ({
-    post: state.post
+    post: state.post,
+    credentials: state.credentials
 }))(Posts);
 
 

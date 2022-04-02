@@ -46,11 +46,10 @@ const EditThread = (props) => {
         <div className="designEditThread">
             <div className="formEditThread">
                 <p>UPDATE HERE YOUR THREAD</p>
-                <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" >FALTA TRAER EL THREAD PARA ACTUALIZARLO</textarea>
+                {/* FALTA HACER LABEL TITLE */}
+                <input type="text" name="title" id="content" placeholder="update your title here"/>
                 <div className="buttonnewComment" onClick={() => updateThread()}>UPDATE</div>
-
-                {/* {{base_url}}threads/comments/edit/como-hacer-una-buena-tortilla-de-patatas */}
-            </div>
+             </div>
         </div>
     )
 

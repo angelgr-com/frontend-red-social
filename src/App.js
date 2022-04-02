@@ -17,6 +17,7 @@ import NewThread from './Containers/NewThread/NewThread';
 import EditComment from './Containers/EditComment/EditComment'; 
 import EditThread from './Containers/EditThread/EditThread'; 
 import DeleteThread from './Containers/DeleteThread/DeleteThread'; 
+import DeleteComment from './Containers/DeleteComment/DeleteComment'; 
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="/editComment" element={<EditComment/>}/>
           <Route path="/editThread" element={<EditThread/>}/>
           <Route path="/deleteThread" element={<DeleteThread/>}/>
+          <Route path="/deleteComment" element={<DeleteComment/>}/>
           
 
        

@@ -14,18 +14,18 @@ const Posts = (props) => {
     let navigate = useNavigate();
 
     const navegar = () => {
-        navigate("/"); 
+        navigate("/");
     }
 
     const newComment = () => {
-        navigate("/newComment"); 
+        navigate("/newComment");
     }
 
 
 
     // Hook
     const [posts, setPosts] = useState([]);
- 
+
 
     // UseEffect de montaje
     useEffect(() => {
@@ -38,24 +38,31 @@ const Posts = (props) => {
         navigate("/");
     }
 
-     // Navegar a EditComment
-     const goEdit = async () => {
+    // Navegar a EditComment
+    const goEdit = async () => {
         console.log("entra en goHome")
         navigate("/editComment");
     }
 
-     // Navegar a EditThread
-     const goEditThread = async () => {
+    // Navegar a EditThread
+    const goEditThread = async () => {
         console.log("entra en goThread")
         navigate("/editThread");
     }
 
-     // Navegar a DeleteThread
-     const goDeleteThread = async () => {
+    // Navegar a DeleteThread
+    const goDeleteThread = async () => {
         console.log("entra en goDeleteThread")
         navigate("/deleteThread");
     }
 
+    // Navegar a DeleteComment
+    const  goDeleteComment = async () => {
+        console.log("entra en goDeleteComment")
+        navigate("/deleteComment");
+    }
+
+    
     // Funcion traer POSTS
 
     const traePosts = async () => {
@@ -63,7 +70,7 @@ const Posts = (props) => {
         console.log("entra en la funcion Trae Posts")
 
         try {
-            
+
             // props.post.text1.replace(/ /g, ""); 
             // console.log("props.post")
             // console.log("e",props.post,"e");
@@ -88,26 +95,26 @@ const Posts = (props) => {
         // aqui mapeo porque ya las tengo
         return (
             <div className="designPost">
-                <div className="topDesignPost"> 
-                <div className="itemButtonNewPost" onClick={()=>newComment()} >New comment</div> 
-                <div className="itemButtonNewPost" onClick={()=>goEditThread()} >Edit Thread</div> 
-                <div className="itemButtonNewPost" onClick={()=>goDeleteThread()} >Delete Thread</div> 
-                <div className="itemButtonNewPost" onClick={()=>goHome()} >Home</div> 
+                <div className="topDesignPost">
+                    <div className="itemButtonNewPost" onClick={() => newComment()} >New comment</div>
+                    <div className="itemButtonNewPost" onClick={() => goEditThread()} >Edit Thread</div>
+                    <div className="itemButtonNewPost" onClick={() => goDeleteThread()} >Delete Thread</div>
+                    <div className="itemButtonNewPost" onClick={() => goHome()} >Home</div>
                 </div>
                 {posts.map(
                     item => {
                         console.log("devuelve el mapeo de posts")
-   
+
                         return (
                             <div className="itemPost" key={item._id}>
                                 <div className="containerPostUp">
                                     {/* <div className="themePosts"> {item.theme}</div> */}
-                                    
+
                                 </div>
-                                
+
                                 <div className="containerPostDown">
                                     <div className="containerPostDownGlobal">
-                                        <div  className="containerPostDownGlobalLeft">
+                                        <div className="containerPostDownGlobalLeft">
                                             <div className="nickname"> NICKNAME{item.author}</div>
                                             {/* <div className="avatar">AVATAR{item.avatar}</div> */}
                                         </div>
@@ -118,8 +125,8 @@ const Posts = (props) => {
                                                 <div className="containerPostDownGlobalRightDownLike"> Likes {item.likes}</div>
                                                 <div className="containerPostDownGlobalRightDownDate">{item.date}</div>
                                                 <div className="containerPostDownGlobalRightDownUpdate">
-                                                    <div className="containerPostDownGlobalRightDownUpdateEdit" onClick={()=>goEdit()}>Edit</div>
-                                                    <div className="containerPostDownGlobalRightDownUpdateDelete" >Delete</div>
+                                                    <div className="containerPostDownGlobalRightDownUpdateEdit" onClick={() => goEdit()}>Edit</div>
+                                                    <div className="containerPostDownGlobalRightDownUpdateDelete" onClick={() => goDeleteComment()} >Delete</div>
                                                 </div>
                                             </div>
                                         </div>

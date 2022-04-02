@@ -101,23 +101,10 @@ const NewComment = (props) => {
             <p>TRAER AUTHOR POR PROPS</p>
             <br />
             <label htmlFor="content">content</label>
-<<<<<<< HEAD
             <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" onChange={(e) => { rellenarDatos(e) }}></textarea>
             <div className="buttonnewComment" onClick={() => dataComment()}>
                 Registrar
             </div>
-
-
-
-
-
-
-=======
-            <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" onChange={(e)=>{rellenarDatos(e)}}></textarea>
-            <div className="buttonnewComment" onClick={()=>dataComment()}>
-                        Registrar
-             </div>
->>>>>>> fc8d2d80c19430432234c0678246cd02060cccb6
         </div>
     )
 

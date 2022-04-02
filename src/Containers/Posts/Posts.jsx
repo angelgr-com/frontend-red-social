@@ -50,6 +50,12 @@ const Posts = (props) => {
         navigate("/editThread");
     }
 
+     // Navegar a DeleteThread
+     const goDeleteThread = async () => {
+        console.log("entra en goDeleteThread")
+        navigate("/deleteThread");
+    }
+
     // Funcion traer POSTS
 
     const traePosts = async () => {
@@ -85,6 +91,7 @@ const Posts = (props) => {
                 <div className="topDesignPost"> 
                 <div className="itemButtonNewPost" onClick={()=>newComment()} >New comment</div> 
                 <div className="itemButtonNewPost" onClick={()=>goEditThread()} >Edit Thread</div> 
+                <div className="itemButtonNewPost" onClick={()=>goDeleteThread()} >Delete Thread</div> 
                 <div className="itemButtonNewPost" onClick={()=>goHome()} >Home</div> 
                 </div>
                 {posts.map(

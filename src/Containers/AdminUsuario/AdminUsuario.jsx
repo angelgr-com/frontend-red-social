@@ -58,7 +58,7 @@ const AdminUsuario = (props) => {
     return (
         <div className='designAdminUsuario'>
             <div className="designAdminUsuarioInputs">
-               
+                
             </div>
         </div>
     )

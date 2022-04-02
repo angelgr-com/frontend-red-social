@@ -12,6 +12,7 @@ import Theme from './Containers/Theme/Theme';
 import AdminUsuario from './Containers/AdminUsuario/AdminUsuario'; 
 import AdminAuth from './Containers/AdminAuth/AdminAuth'; 
 import Posts from './Containers/Posts/Posts'; 
+import NewComment from './Containers/NewComment/NewComment'; 
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/adminUsuario" element={<AdminUsuario/>}/>
           <Route path="/adminAuth" element={<AdminAuth/>}/>
           <Route path="/posts" element={<Posts/>}/>
+          <Route path="/newComment" element={<NewComment/>}/>
 
 
        

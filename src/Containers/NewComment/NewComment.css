@@ -1,0 +1,9 @@
+.designNewComment {
+    background-color: lightgray;
+    width: 100vw;
+    height: 34em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

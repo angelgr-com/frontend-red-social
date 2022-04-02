@@ -1,10 +1,9 @@
 import { connect } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-// import { POST } from '../../redux/types';
 import './Posts.css';
 import axios from 'axios';
-// import { raiz } from "../../utiles";
+
 
 
 const Posts = (props) => {
@@ -15,8 +14,14 @@ const Posts = (props) => {
     let navigate = useNavigate();
 
     const navegar = () => {
-        navigate("/"); // CONPROBAR LINEA
+        navigate("/"); 
     }
+
+    const newComment = () => {
+        navigate("/newComment"); 
+    }
+
+
 
     // Hook
     const [posts, setPosts] = useState([]);
@@ -54,6 +59,7 @@ const Posts = (props) => {
         // aqui mapeo porque ya las tengo
         return (
             <div className="designPost">
+                <div className="itemButtonNewPost" onClick={()=>newComment()} >New post</div> 
                 {posts.map(
                     item => {
                         console.log("devuelve el mapeo de posts")

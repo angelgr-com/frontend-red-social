@@ -172,3 +172,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.itemButtonNewPost {
+    height: 3em;
+    width: 8em;
+    background-color: darkgray;
+    border: 1px solid black;
+}

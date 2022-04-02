@@ -55,7 +55,7 @@ const Theme = (props) => {
         <div className="designTheme">
             <div className="topSectionTheme">
             <div className="itemTheme">Threads about {props.post}</div>
-            <div className="itemButton" onClick={()=>newThread()} >New post</div>
+            <div className="itemButton" onClick={()=>newThread()} >New post</div> 
             </div>
             <div className="contenidoPosts">
 

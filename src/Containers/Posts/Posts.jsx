@@ -77,7 +77,7 @@ const Posts = (props) => {
             setPosts(resultado.data);// SE GUARDA EL RESULTADO EN EL HOOK
             console.log("posts guardados en hook")
 
-
+ 
         } catch (error) {
             console.log(error);
         }

@@ -163,16 +163,33 @@
     justify-content: center;
 }
 
-.containerPostDownGlobalRightDownEmpty {
+.containerPostDownGlobalRightDownUpdate {
     height: 100%;
     width: 30%;
     background-color: lightcoral;
     border: 1px solid black;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+.containerPostDownGlobalRightDownUpdateEdit{
+    height: 100%;
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
+.containerPostDownGlobalRightDownUpdateDelete{
+    height: 100%;
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .itemButtonNewPost {
     height: 3em;
     width: 8em;

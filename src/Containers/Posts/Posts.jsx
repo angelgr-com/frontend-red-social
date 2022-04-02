@@ -32,13 +32,23 @@ const Posts = (props) => {
         traePosts();
     }, [])
 
+    // Navegar a Home
     const goHome = async () => {
-
         console.log("entra en goHome")
         navigate("/");
-
     }
 
+     // Navegar a EditComment
+     const goEdit = async () => {
+        console.log("entra en goHome")
+        navigate("/editComment");
+    }
+
+     // Navegar a EditThread
+     const goEditThread = async () => {
+        console.log("entra en goThread")
+        navigate("/editThread");
+    }
 
     // Funcion traer POSTS
 
@@ -72,8 +82,9 @@ const Posts = (props) => {
         // aqui mapeo porque ya las tengo
         return (
             <div className="designPost">
-                <div className="topDesignPost">
+                <div className="topDesignPost"> 
                 <div className="itemButtonNewPost" onClick={()=>newComment()} >New comment</div> 
+                <div className="itemButtonNewPost" onClick={()=>goEditThread()} >Edit Thread</div> 
                 <div className="itemButtonNewPost" onClick={()=>goHome()} >Home</div> 
                 </div>
                 {posts.map(
@@ -99,7 +110,10 @@ const Posts = (props) => {
                                             <div className="containerPostDownGlobalRightDown">
                                                 <div className="containerPostDownGlobalRightDownLike"> Likes {item.likes}</div>
                                                 <div className="containerPostDownGlobalRightDownDate">{item.date}</div>
-                                                <div className="containerPostDownGlobalRightDownEmpty">EMPTY</div>
+                                                <div className="containerPostDownGlobalRightDownUpdate">
+                                                    <div className="containerPostDownGlobalRightDownUpdateEdit" onClick={()=>goEdit()}>Edit</div>
+                                                    <div className="containerPostDownGlobalRightDownUpdateDelete" >Delete</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

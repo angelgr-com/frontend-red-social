@@ -32,7 +32,12 @@ const Posts = (props) => {
         traePosts();
     }, [])
 
+    const goHome = async () => {
 
+        console.log("entra en goHome")
+        navigate("/");
+
+    }
 
 
     // Funcion traer POSTS
@@ -67,7 +72,10 @@ const Posts = (props) => {
         // aqui mapeo porque ya las tengo
         return (
             <div className="designPost">
-                <div className="itemButtonNewPost" onClick={()=>newComment()} >New post</div> 
+                <div className="topDesignPost">
+                <div className="itemButtonNewPost" onClick={()=>newComment()} >New comment</div> 
+                <div className="itemButtonNewPost" onClick={()=>goHome()} >Home</div> 
+                </div>
                 {posts.map(
                     item => {
                         console.log("devuelve el mapeo de posts")

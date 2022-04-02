@@ -25,6 +25,13 @@ const NewComment = (props) => {
             [e.target.name]: e.target.value})
     };
 
+    const goHome = async () => {
+
+        console.log("entra en goHome")
+        navigate("/");
+
+    }
+
     // Funcion new Post
     let navigate = useNavigate();
     const dataComment = async () => {
@@ -62,7 +69,9 @@ const NewComment = (props) => {
             console.log("elementos")
             console.log(props);
             console.log(body);
-            let resultado = await axios.put(raiz + `Comments/comments/new/${props.title_url}`, body); // VERIFICAR ESTA LINEA
+            console.log(props.post);
+            let resultado = await axios.put(raiz + `/threads/comments/new/${props.post}`, body); // VERIFICAR ESTA LINEA
+            console.log("commentario guardado en hook")
             console.log(resultado);
             setComment(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
             console.log("commentario guardado en hook")
@@ -80,6 +89,10 @@ const NewComment = (props) => {
 
     return ( // AÑADIR  HANDLER
         <div className="designNewComment">
+            <div className="topDesignPost">
+               
+               <div className="itemButtonNewPost" onClick={()=>goHome()} >Home</div> 
+               </div>
             <p>CREA AQUI TU COMENTARIO</p>
             <br />
             <br />

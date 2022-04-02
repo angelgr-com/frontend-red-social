@@ -44,6 +44,11 @@ const Posts = (props) => {
         navigate("/editComment");
     }
 
+     // Navegar a EditThread
+     const goEditThread = async () => {
+        console.log("entra en goThread")
+        navigate("/editThread");
+    }
 
     // Funcion traer POSTS
 
@@ -77,8 +82,9 @@ const Posts = (props) => {
         // aqui mapeo porque ya las tengo
         return (
             <div className="designPost">
-                <div className="topDesignPost">
+                <div className="topDesignPost"> 
                 <div className="itemButtonNewPost" onClick={()=>newComment()} >New comment</div> 
+                <div className="itemButtonNewPost" onClick={()=>goEditThread()} >Edit Thread</div> 
                 <div className="itemButtonNewPost" onClick={()=>goHome()} >Home</div> 
                 </div>
                 {posts.map(

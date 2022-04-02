@@ -22,7 +22,12 @@ const Theme = (props) => {
     // Funcion escoger Post
     // console.log("eeeeeeeeeeee")
     // console.log(props)
+    const goHome = async () => {
 
+        console.log("entra en goHome")
+        navigate("/");
+
+    }
 
     // Funcion que trae posts segun el tema 
     const bringTheme = async () => {
@@ -54,8 +59,9 @@ const Theme = (props) => {
         
         <div className="designTheme">
             <div className="topSectionTheme">
-            <div className="itemTheme">Threads about {props.post}</div>
             <div className="itemButton" onClick={()=>newThread()} >New post</div> 
+            <div className="itemTheme">Threads about {props.post}</div>
+            <div className="itemButton" onClick={()=>goHome()} >Home</div> 
             </div>
             <div className="contenidoPosts">
 

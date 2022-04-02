@@ -3,19 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import './NewComment.css';
 import axios from 'axios';
-import {raiz} from '../../utiles';
-
+import { raiz } from '../../utiles';
+import {checkError} from '../../utiles';
 
 const NewComment = (props) => {
 
     console.log("entro en NewComment");
+    const [msgError, setMsgError] = useState("");
 
-    // Navegar
-    let navigate = useNavigate();
-
-    const navegar = () => {
-        navigate("/"); 
-    }
 
     // Hook
     const [comment, setComment] = useState({
@@ -23,37 +18,67 @@ const NewComment = (props) => {
     });
 
 
-    // UseEffect de montaje
-    useEffect(() => {
-        newComment();
-    }, [])
 
-    //Handler 
-//     const rellenarDatos = (e) => { // CAMBIAR
-//         setComment({...comment
-//             [e.target.comment]: e.target.value})
-// };
+    const rellenarDatos = (e) => {
+        console.log(e.target.value)
+        setComment({...comment, 
+            [e.target.name]: e.target.value})
+    };
 
+    const goHome = async () => {
 
+        console.log("entra en goHome")
+        navigate("/");
+
+    }
 
     // Funcion new Post
-
-    const newComment = async () => {
+    let navigate = useNavigate();
+    const dataComment = async () => {
 
         console.log("entra en la funcion que crea un nuevo comentario")
+        setMsgError("");
+        let error = "";
 
+        let arrayCampos = Object.entries(comment);
+        
+        // //1 comprobación de errores antes de enviar al backend
+
+
+
+        for(let elemento of arrayCampos){
+            error = checkError(elemento[0],elemento[1]);
+
+            if(error !== "ok"){
+                setMsgError(error);
+                return;
+            };
+        };
+
+        console.log("todo ha ido bien",comment)
         let body = {
-            author : "rodrigo",
-            content : "Lorem ipsum", 
-                    }
+            posts: [{
+                author:props.credentials.name,
+                content:comment.content
+            }]
+        }
+
 
 
         try {
-
-            let resultado = await axios.put(raiz + `/threads/comments/new/title` ,body); // VERIFICAR ESTA LINEA
+            console.log("elementos")
+            console.log(props);
+            console.log(body);
+            console.log(props.post);
+            let resultado = await axios.put(raiz + `/threads/comments/new/${props.post}`, body); // VERIFICAR ESTA LINEA
+            console.log("commentario guardado en hook")
             console.log(resultado);
             setComment(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
             console.log("commentario guardado en hook")
+
+            setTimeout(()=>{
+                navigate("/posts");
+            },1000);
 
 
         } catch (error) {
@@ -61,26 +86,32 @@ const NewComment = (props) => {
         }
     }
 
-   
-        return ( // AÑADIR  HANDLER
-            <div className="designNewComment">
-                <p>CREA AQUI TU COMENTARIO</p>
-                <br />
-                <br />
-                <p>TRAER AUTHOR POR PROPS</p>
-                <br />
-                <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
-                {/* <input className='inputComment' type="textArea" name="Comment" id="Comment" title="Comment" placeholder="Escribe aqui tu comentario:" autoComplete="off" /> */}
-                <input type="submit" />
+
+    return ( // AÑADIR  HANDLER
+        <div className="designNewComment">
+            <div className="topDesignPost">
+               
+               <div className="itemButtonNewPost" onClick={()=>goHome()} >Home</div> 
+               </div>
+            <p>CREA AQUI TU COMENTARIO</p>
+            <br />
+            <br />
+            <p>TRAER AUTHOR POR PROPS</p>
+            <br />
+            <label htmlFor="content">content</label>
+            <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" onChange={(e)=>{rellenarDatos(e)}}></textarea>
+            <div className="buttonnewComment" onClick={()=>dataComment()}>
+                        Registrar
+             </div>
 
 
 
-
-
-
-            </div>
-        )
  
+
+
+        </div>
+    )
+
 }
 
 
@@ -88,7 +119,8 @@ const NewComment = (props) => {
 
 
 export default connect((state) => ({
-    post: state.post
+    post: state.post,
+    credentials: state.credentials
 }))(NewComment);
 
 

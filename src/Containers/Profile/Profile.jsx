@@ -14,6 +14,8 @@ const Profile = (props) => {
     // Navegar
     let navigate = useNavigate();
     const [res, setRes] = useState("");
+    const [followers, setFollowers] = useState("");
+
 
     console.log("aaaaaaaaaaaa")
     console.log(props.credentials.token)
@@ -39,6 +41,7 @@ const Profile = (props) => {
 
     // Use Effect de montaje
     useEffect(() => {
+        bringFollowers()
     }, [])
 
 
@@ -89,6 +92,36 @@ const Profile = (props) => {
 
     }
 
+    const bringFollowers = async () => {
+
+
+
+        // let config = {
+        //     headers: { Authorization: `Bearer ${props.credentials.token}` }
+        // };
+
+        try {
+            //Hacemos el update en la base de datos
+            
+            let a =props.credentials.name
+            console.log(a.toLowerCase())
+            let e=a.toLowerCase();
+            console.log(raiz + `/users/following/`+e)
+
+            let resultado = await axios.get(raiz + `/users/following/`+e);
+            console.log("awwwwwwwwwwwwwwwwa")
+            console.log(resultado.data)
+            setFollowers(resultado.data);
+            console.log("usuario actualizado guardado en Hook")
+
+
+
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
     if (props.credentials?.token !== undefined) {
 
         return (
@@ -97,29 +130,35 @@ const Profile = (props) => {
 
                     <div className="itemButtonNewPost" onClick={() => goHome()} >Home</div>
                 </div>
-                <div className="designProfileInputs">
+                <div className="designProfileBottom">
+                    <div className="followers">{followers}</div>
 
-                    <div className="inputProfile"><b>Name:<input type="text" name="Name" id="Name" title="Name" placeholder={props.credentials.name} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    </b></div>
+                    <div className="designProfileInputs">
 
-                    <div className="inputProfile"><b>Nickname:</b><input type="text" name="email" id="email" title="email" placeholder={props.credentials.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
+                        <div className="inputProfile"><b>Name:<input type="text" name="Name" id="Name" title="Name" placeholder={props.credentials.name} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        </b></div>
 
-
-                    <div className="inputProfile"><b>Email:</b><input type="email" name="email" id="email" title="email" placeholder={props.credentials.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
-
+                        <div className="inputProfile"><b>Nickname:</b><input type="text" name="email" id="email" title="email" placeholder={props.credentials.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
 
 
-                    <div className="inputProfile"><b>Password:</b><input type="text" name="password" id="password" title="password" placeholder="*****" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        <div className="inputProfile"><b>Email:</b><input type="email" name="email" id="email" title="email" placeholder={props.credentials.email} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div>
+
+
+
+                        <div className="inputProfile"><b>Password:</b><input type="text" name="password" id="password" title="password" placeholder="*****" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                        </div>
+
+                        <div className="inputProfile"><b>Avatar:</b><input type="text" name="Avatar" id="Avatar" title="Avatar" onChange={(e) => { rellenarDatos(e) }} />
+                        </div>
+
+
+                        <div className="profileFieldButton">
+                            <div className="buttonUpdate" onClick={() => updateUser()}>Actualiza</div>
+                        </div>
+
+
+
                     </div>
-
-                    <div className="inputProfile"><b>Avatar:</b><input type="text" name="Avatar" id="Avatar" title="Avatar" onChange={(e) => { rellenarDatos(e) }} />
-                    </div>
-
-
-                    <div className="profileFieldButton">
-                        <div className="buttonUpdate" onClick={() => updateUser()}>Actualiza</div>
-                    </div>
-
                 </div>
             </div>
 

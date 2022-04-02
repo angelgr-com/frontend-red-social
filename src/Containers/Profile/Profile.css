@@ -10,6 +10,14 @@
     border-bottom: 2px solid black;
 }
 
+.designProfileBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .buttonUpdate {
     height: 2em;
     width: 8em;
@@ -55,7 +63,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -70,4 +78,15 @@
   justify-content: center;
   align-items: center;
   border-radius:2em;
+}
+
+.followers{
+  background-color: white;
+  height: 30em;
+  width: 20em;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

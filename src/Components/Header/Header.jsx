@@ -92,7 +92,7 @@ const Header = (props) => {
                     <div className='designHeader'>
 
                         <div className="headerSpace logoDesign">
-                            <img className="logo" src={require('../../img/fondo.jpg')} alt="logo" onClick={() => navegar("/")}></img>
+                            <img className="logo" src={require('../../img/logo.png')} alt="logo" onClick={() => navegar("/")}></img>
                         </div>
                         <div className="headerSpace searchDesign">
                             

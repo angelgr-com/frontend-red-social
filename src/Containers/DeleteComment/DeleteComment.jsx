@@ -34,13 +34,13 @@ const DeleteComment = (props) => {
             console.log(resultado.data)
 
             // AQUI FALTA NAVIGATE A DONDE?
-
+ 
         } catch (error) {
             // console.log(error);
         }
 
     };
- 
+  
 
 // FALTA EL IF DE COMPROBACIO
 

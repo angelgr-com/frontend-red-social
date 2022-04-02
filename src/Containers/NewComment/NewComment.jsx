@@ -43,14 +43,17 @@ const NewComment = (props) => {
         console.log("entra en la funcion que crea un nuevo comentario")
 
         let body = {
+            "posts": [{
             author : "rodrigo",
-            content : "Lorem ipsum", 
+            content : "Lorem ipsum"
+        }]
                     }
+                
 
 
         try {
 
-            let resultado = await axios.put(raiz + `/threads/comments/new/title` ,body); // VERIFICAR ESTA LINEA
+            let resultado = await axios.put(raiz + `threads/comments/new/${props.title_url}`,body); // VERIFICAR ESTA LINEA
             console.log(resultado);
             setComment(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
             console.log("commentario guardado en hook")

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import './NewComment.css';
 import axios from 'axios';
-
+import {raiz} from '../../utiles';
 
 
 const NewComment = (props) => {
@@ -18,13 +18,22 @@ const NewComment = (props) => {
     }
 
     // Hook
-    const [comment, setComment] = useState([]);
+    const [comment, setComment] = useState({
+        content: ""
+    });
 
 
     // UseEffect de montaje
-    // useEffect(() => {
-    
-    // }, [])
+    useEffect(() => {
+        newComment();
+    }, [])
+
+    //Handler 
+//     const rellenarDatos = (e) => { // CAMBIAR
+//         setComment({...comment
+//             [e.target.comment]: e.target.value})
+// };
+
 
 
     // Funcion new Post
@@ -36,16 +45,15 @@ const NewComment = (props) => {
         let body = {
             author : "rodrigo",
             content : "Lorem ipsum", 
-           
-           }
+                    }
 
 
         try {
 
-            let resultado = await axios.put(); // tiene que hacer un .post
+            let resultado = await axios.put(raiz + `/threads/comments/new/title` ,body); // VERIFICAR ESTA LINEA
             console.log(resultado);
             setComment(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
-            console.log("posts guardados en hook")
+            console.log("commentario guardado en hook")
 
 
         } catch (error) {
@@ -54,9 +62,16 @@ const NewComment = (props) => {
     }
 
    
-        return (
+        return ( // AÑADIR  HANDLER
             <div className="designNewComment">
-                
+                <p>CREA AQUI TU COMENTARIO</p>
+                <br />
+                <br />
+                <p>TRAER AUTHOR POR PROPS</p>
+                <br />
+                <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+                {/* <input className='inputComment' type="textArea" name="Comment" id="Comment" title="Comment" placeholder="Escribe aqui tu comentario:" autoComplete="off" /> */}
+                <input type="submit" />
 
 
 

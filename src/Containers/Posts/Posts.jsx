@@ -32,11 +32,16 @@ const Posts = (props) => {
         traePosts();
     }, [])
 
+    // Navegar a Home
     const goHome = async () => {
-
         console.log("entra en goHome")
         navigate("/");
+    }
 
+     // Navegar a EditComment
+     const goEdit = async () => {
+        console.log("entra en goHome")
+        navigate("/editComment");
     }
 
 
@@ -99,7 +104,10 @@ const Posts = (props) => {
                                             <div className="containerPostDownGlobalRightDown">
                                                 <div className="containerPostDownGlobalRightDownLike"> Likes {item.likes.length}</div>
                                                 <div className="containerPostDownGlobalRightDownDate">{item.date}</div>
-                                                <div className="containerPostDownGlobalRightDownEmpty">EMPTY</div>
+                                                <div className="containerPostDownGlobalRightDownUpdate">
+                                                    <div className="containerPostDownGlobalRightDownUpdateEdit" onClick={()=>goEdit()}>Edit</div>
+                                                    <div className="containerPostDownGlobalRightDownUpdateDelete" >Delete</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

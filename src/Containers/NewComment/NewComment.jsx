@@ -103,12 +103,6 @@ const NewComment = (props) => {
             <div className="buttonnewComment" onClick={()=>dataComment()}>
                         Registrar
              </div>
-
-
-
- 
-
-
         </div>
     )
 

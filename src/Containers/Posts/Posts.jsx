@@ -42,9 +42,17 @@ const Posts = (props) => {
         console.log("entra en la funcion Trae Posts")
 
         try {
-
-            let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/theme/${props.post}`);
-            console.log(resultado);
+            
+            // props.post.text1.replace(/ /g, ""); 
+            // console.log("props.post")
+            // console.log("e",props.post,"e");
+            // console.log(typeof(props.post))
+            // props.post.replace(/ /g, ""); 
+            // console.log("props.post")
+            console.log(`e${props.post}e`);
+            let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/comments/all/${props.post}`);
+            console.log("resultado.data")
+            console.log(resultado.data);
             setPosts(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
             console.log("posts guardados en hook")
 
@@ -54,7 +62,7 @@ const Posts = (props) => {
         }
     }
 
-    if (posts[0] !== undefined) {
+    if (posts !== undefined) {
         console.log("array de posts contiene post)")
         // aqui mapeo porque ya las tengo
         return (
@@ -65,24 +73,24 @@ const Posts = (props) => {
                         console.log("devuelve el mapeo de posts")
 
                         return (
-                            <div className="itemPost" key={item.id}>
+                            <div className="itemPost" key={item._id}>
                                 <div className="containerPostUp">
-                                    <div className="themePosts"> {item.theme}</div>
+                                    {/* <div className="themePosts"> {item.theme}</div> */}
                                     
                                 </div>
                                 
                                 <div className="containerPostDown">
                                     <div className="containerPostDownGlobal">
                                         <div  className="containerPostDownGlobalLeft">
-                                            <div className="nickname"> NICKNAME{item.nickname}</div>
-                                            <div className="avatar">AVATAR{item.avatar}</div>
+                                            <div className="nickname"> NICKNAME{item.author}</div>
+                                            {/* <div className="avatar">AVATAR{item.avatar}</div> */}
                                         </div>
                                         <div className="containerPostDownGlobalRight">
                                             <div className="containerPostDownGlobalRightUp">{item.title}</div>
-                                            <div className="containerPostDownGlobalRightMiddle">{item.posts[0].content}</div>
+                                            <div className="containerPostDownGlobalRightMiddle">{item.content}</div>
                                             <div className="containerPostDownGlobalRightDown">
-                                                <div className="containerPostDownGlobalRightDownLike"> Likes {item.posts[0].likes.length}</div>
-                                                <div className="containerPostDownGlobalRightDownDate">{item.posts[0].date}</div>
+                                                <div className="containerPostDownGlobalRightDownLike"> Likes {item.likes.length}</div>
+                                                <div className="containerPostDownGlobalRightDownDate">{item.date}</div>
                                                 <div className="containerPostDownGlobalRightDownEmpty">EMPTY</div>
                                             </div>
                                         </div>

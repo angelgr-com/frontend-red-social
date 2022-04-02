@@ -1,0 +1,83 @@
+
+.designnewThread {
+    width: 100%;
+    height: 60em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+  
+  .cardnewThread {
+      height: 45em;
+      width: 40em;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left:3em;
+      border-radius: 1em;
+  }
+  
+  .upCardnewThread {
+      height: 4em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      color: rgb(0, 0, 0);
+      
+      
+  
+  }
+  
+  .middleCardnewThread {
+      height: 60em;
+      width: 20em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      font-size : 1em;
+      background-color: darkgray;
+      border: 1px solid black;
+      border-radius: 1em;
+  
+  }
+  
+  .bottomCardnewThread {
+      margin-top: 1em;
+      height: 6em;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: flex-start;
+  }
+  
+  .inputnewThread{
+    height: 3em;
+    width: 20em;
+    border: 1px solid black;
+    border-radius: 1em;
+   } 
+  
+  .buttonnewThread {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 5em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+  }
+  
+  
+  
+  
+  
+  

@@ -13,6 +13,7 @@ import AdminUsuario from './Containers/AdminUsuario/AdminUsuario';
 import AdminAuth from './Containers/AdminAuth/AdminAuth'; 
 import Posts from './Containers/Posts/Posts'; 
 import NewComment from './Containers/NewComment/NewComment'; 
+import NewThread from './Containers/NewThread/NewThread'; 
 
 
 function App() {
@@ -34,7 +35,8 @@ function App() {
           <Route path="/adminAuth" element={<AdminAuth/>}/>
           <Route path="/posts" element={<Posts/>}/>
           <Route path="/newComment" element={<NewComment/>}/>
-
+          <Route path="/newThread" element={<NewThread/>}/>
+          
 
        
        

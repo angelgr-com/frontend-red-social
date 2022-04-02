@@ -20,23 +20,23 @@ const Theme = (props) => {
     },[]);
 
     // Funcion escoger Post
-    console.log("eeeeeeeeeeee")
-    console.log(props)
+    // console.log("eeeeeeeeeeee")
+    // console.log(props)
 
 
     // Funcion que trae posts segun el tema 
     const bringTheme = async () => {
         
         try {
-
+            // console.log("lo que le mando de post")
             let resultado = await axios.get(raiz+`/threads/theme/${props.post}`); 
-            console.log("themes llegados de backend")
+            // console.log("themes llegados de backend")
             setTheme(resultado.data);
-            console.log(resultado.data)
+            // console.log(resultado.data)
            
 
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
 
     };
@@ -60,8 +60,8 @@ const Theme = (props) => {
             <div className="contenidoPosts">
 
                 {theme.map(item => {
-                    console.log("item  uuuuuu")
-                    console.log(item)
+                    // console.log("item  uuuuuu")
+                    // console.log(item)
                     return ( // AQUI HABRA QUE PONER LOS MISMOS DATOS QUE HAYA EN TABLA BACKEND
 
                         <Thread key={item._id} theme={item}/>

@@ -71,7 +71,7 @@ const Posts = (props) => {
                 {posts.map(
                     item => {
                         console.log("devuelve el mapeo de posts")
- 
+  
                         return (
                             <div className="itemPost" key={item._id}>
                                 <div className="containerPostUp">

@@ -40,7 +40,7 @@ const DeleteComment = (props) => {
         }
 
     };
-
+ 
 
 // FALTA EL IF DE COMPROBACIO
 

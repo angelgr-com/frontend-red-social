@@ -25,13 +25,9 @@ const Posts = (props) => {
 
     // Hook
     const [posts, setPosts] = useState([]);
-<<<<<<< HEAD
     const [likes, setLikes] = useState([]);
     const [seguir, setSeguir] = useState([]);
  
-=======
-
->>>>>>> 76bc9a17af98ae4265c4df137eba32e89f2b1500
 
     // UseEffect de montaje
     useEffect(() => {

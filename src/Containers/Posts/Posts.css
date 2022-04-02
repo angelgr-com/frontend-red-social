@@ -212,3 +212,15 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.itemButton {
+    height: 1em;
+    width: 8em;
+    background-color: darkgray;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:2em;
+}

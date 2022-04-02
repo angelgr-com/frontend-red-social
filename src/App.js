@@ -15,6 +15,7 @@ import Posts from './Containers/Posts/Posts';
 import NewComment from './Containers/NewComment/NewComment'; 
 import NewThread from './Containers/NewThread/NewThread'; 
 import EditComment from './Containers/EditComment/EditComment'; 
+import EditThread from './Containers/EditThread/EditThread'; 
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/newComment" element={<NewComment/>}/>
           <Route path="/newThread" element={<NewThread/>}/>
           <Route path="/editcomment" element={<EditComment/>}/>
+          <Route path="/editthread" element={<EditThread/>}/>
           
 
        

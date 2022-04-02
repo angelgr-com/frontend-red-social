@@ -27,6 +27,7 @@ const EditThread = (props) => {
         try {
             console.log("mando thread actualizado a axios")
             console.log(props);
+            console.log("hago llamada a axios")
             let resultado = await axios.put(raiz + `/threads/comments/edit/${props.post}`); // VERIFICAR FINAL DE LINEA PREGUNTAR A RAFA
 
             console.log("cambios llegados a backend")
@@ -45,9 +46,8 @@ const EditThread = (props) => {
 
         <div className="designEditThread">
             <div className="formEditThread">
-                <p>UPDATE HERE YOUR THREAD</p>
-                {/* FALTA HACER LABEL TITLE */}
-                <input type="text" name="title" id="content" placeholder="update your title here"/>
+                <p>UPDATE HERE YOUR THREAD <strong>TITLE</strong></p>
+                    <input type="text" name="title" id="content" placeholder="write here your new title"/>
                 <div className="buttonnewComment" onClick={() => updateThread()}>UPDATE</div>
              </div>
         </div>

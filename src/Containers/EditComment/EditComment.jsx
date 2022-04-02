@@ -31,7 +31,7 @@ const EditComment = (props) => {
         try {
             console.log("mando commentario actualizado a axios")
             console.log(props);
-            let resultado = await axios.put(raiz + `/threads/comments/edit/${props.post}`); // VERIFICAR FINAL DE LINEA PREGUNTAR A RAFA
+            let resultado = await axios.put(raiz+`/threads/comments/edit/${props.post}`); // ENDPONT NO FUNCIONA
 
             console.log("cambios llegados a backend")
             setuptdatedComment(resultado.data);

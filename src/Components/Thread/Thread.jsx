@@ -12,22 +12,23 @@ import moment from 'moment';
 
 const Header = (props) => {
  
-    console.log("esto hereda el hijo", props)
+    // console.log("esto hereda el hijo", props)
     // Navegar
     let navigate = useNavigate();
     const choosePost = () => {
 
 
         //Guardamos el post escogido en REDUX al selecionar el post
-        props.dispatch({ type: POST, payload: props.theme.title });
-        console.log("post guardado en Redux")
+        props.dispatch({ type: POST, payload: props.theme.title_url });
+        // console.log("post guardado en Redux")
+        // console.log("e",props.theme.title_url,"e");
         //Redirigimos a la vista de detalles Post con navigate
         navigate("/posts");
     };
 
 
 
-    // console.log(window.location.pathname);
+    // // console.log(window.location.pathname);
     return (
 
         <div className="itemThread" key={props.theme._id} onClick={()=>choosePost()} >

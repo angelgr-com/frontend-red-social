@@ -11,12 +11,13 @@ import './Thread.css';
 import moment from 'moment';
 
 const Header = (props) => {
- 
+    console.log("props.theme.posts")
+    console.log(props.theme.posts)
     // console.log("esto hereda el hijo", props)
     // Navegar
     let navigate = useNavigate();
     const choosePost = () => {
-
+        
 
         //Guardamos el post escogido en REDUX al selecionar el post
         props.dispatch({ type: POST, payload: props.theme.title_url });
@@ -34,7 +35,7 @@ const Header = (props) => {
         <div className="itemThread" key={props.theme._id} onClick={()=>choosePost()} >
             <div className="author">{props.theme.posts[0].author}</div>
             <div className="title">{props.theme.title}</div>
-            <div className="likes">Likes: {props.theme.posts[0].likes.length}</div>
+            <div className="likes">Likes: {props.theme.posts[0].likes}</div>
             <div className="date">{moment(props.theme.posts[0].date).subtract(1, 'days').calendar()}</div> 
         </div>
         //tittle_url

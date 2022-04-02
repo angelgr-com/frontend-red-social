@@ -99,14 +99,14 @@ const Header = (props) => {
                             <div className="relleno"></div>
                         </div>
                         <div className="headerSpace linksDesign">
-                            {
+                            {/* {
                                 (props.credentials?.isAdmin === true) && (window.location.pathname === "/admin") &&
                                 <div className="link" onClick={() => navegar("/admin")}><b>Admin</b></div>
                             }
                             {
                                 (props.credentials?.isAdmin === true) && (window.location.pathname !== "/admin") &&
                                 <div className="link" onClick={() => navegar("/admin")}>Admin</div>
-                            }
+                            } */}
                             {
                                 (window.location.pathname === "/profile") &&
                                 <div className="link" onClick={() => navegar("/profile")}>

@@ -28,10 +28,10 @@ const NewThread = (props) => {
             [e.target.name]: e.target.value
         })
     };
-    const goHome = async () => {
+    const goThread = async () => {
 
         console.log("entra en goHome")
-        navigate("/");
+        navigate("/:theme");
 
     }
     //Funciones locales del componente
@@ -96,7 +96,7 @@ const NewThread = (props) => {
         <div className='designnewThread'>
             <div className="topDesignPost">
 
-                <div className="itemButtonNewPost" onClick={() => goHome()} >Home</div>
+                <div className="itemButtonNewPost" onClick={() => goThread()} >Home</div>
             </div>
             <div className="cardnewThread">
 

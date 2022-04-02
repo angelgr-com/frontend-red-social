@@ -97,7 +97,7 @@ const Posts = (props) => {
                                             <div className="containerPostDownGlobalRightUp">{item.title}</div>
                                             <div className="containerPostDownGlobalRightMiddle">{item.content}</div>
                                             <div className="containerPostDownGlobalRightDown">
-                                                <div className="containerPostDownGlobalRightDownLike"> Likes {item.likes.length}</div>
+                                                <div className="containerPostDownGlobalRightDownLike"> Likes {item.likes}</div>
                                                 <div className="containerPostDownGlobalRightDownDate">{item.date}</div>
                                                 <div className="containerPostDownGlobalRightDownEmpty">EMPTY</div>
                                             </div>

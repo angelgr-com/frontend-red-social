@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import './NewComment.css';
 import axios from 'axios';
 import { raiz } from '../../utiles';
-import {checkError} from '../../utiles';
+import { checkError } from '../../utiles';
 
 const NewComment = (props) => {
 
@@ -21,14 +21,16 @@ const NewComment = (props) => {
 
     const rellenarDatos = (e) => {
         console.log(e.target.value)
-        setComment({...comment, 
-            [e.target.name]: e.target.value})
+        setComment({
+            ...comment,
+            [e.target.name]: e.target.value
+        })
     };
 
-    const goHome = async () => {
+    const goPost = async () => {
 
         console.log("entra en goHome")
-        navigate("/");
+        navigate("/posts");
 
     }
 
@@ -41,25 +43,25 @@ const NewComment = (props) => {
         let error = "";
 
         let arrayCampos = Object.entries(comment);
-        
+
         // //1 comprobación de errores antes de enviar al backend
 
 
 
-        for(let elemento of arrayCampos){
-            error = checkError(elemento[0],elemento[1]);
+        for (let elemento of arrayCampos) {
+            error = checkError(elemento[0], elemento[1]);
 
-            if(error !== "ok"){
+            if (error !== "ok") {
                 setMsgError(error);
                 return;
             };
         };
 
-        console.log("todo ha ido bien",comment)
+        console.log("todo ha ido bien", comment)
         let body = {
             posts: [{
-                author:props.credentials.name,
-                content:comment.content
+                author: props.credentials.name,
+                content: comment.content
             }]
         }
 
@@ -76,9 +78,9 @@ const NewComment = (props) => {
             setComment(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK
             console.log("commentario guardado en hook")
 
-            setTimeout(()=>{
+            setTimeout(() => {
                 navigate("/posts");
-            },1000);
+            }, 1000);
 
 
         } catch (error) {
@@ -90,23 +92,23 @@ const NewComment = (props) => {
     return ( // AÑADIR  HANDLER
         <div className="designNewComment">
             <div className="topDesignPost">
-               
-               <div className="itemButtonNewPost" onClick={()=>goHome()} >Home</div> 
-               </div>
+
+                <div className="itemButtonNewPost" onClick={() => goPost()} >Home</div>
+            </div>
             <p>CREA AQUI TU COMENTARIO</p>
             <br />
             <br />
             <p>TRAER AUTHOR POR PROPS</p>
             <br />
             <label htmlFor="content">content</label>
-            <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" onChange={(e)=>{rellenarDatos(e)}}></textarea>
-            <div className="buttonnewComment" onClick={()=>dataComment()}>
-                        Registrar
-             </div>
+            <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" onChange={(e) => { rellenarDatos(e) }}></textarea>
+            <div className="buttonnewComment" onClick={() => dataComment()}>
+                Registrar
+            </div>
 
 
 
- 
+
 
 
         </div>

@@ -18,11 +18,11 @@ Hemos utilizado:
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Pre-requisitos 📋
+## Tabla de contenidos
 
-Se necesitará un IDE para la instalación del proyecto, en este caso hemos usado Visual Studio Code. 
+[TOC]
 
-### Tecnologías utilizadas 🚀
+## Tecnologías utilizadas 🚀
 
 El proyecto ha sido desarrollado utilizando los siguientes paquetes:
 
@@ -38,7 +38,7 @@ El proyecto ha sido desarrollado utilizando los siguientes paquetes:
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### ¿Cómo desplegar el proyecto? 
+## ¿Cómo desplegar el proyecto?
 
 Las siguientes instrucciones permiten obtener una copia local del proyecto para investigación de códgio o de desarollo:
 
@@ -93,9 +93,6 @@ Se encuentra desplegado en Heroku, por lo que no es necesario realizar ninguna a
 ### Posts
 
 ### ![VistaComentarios](./src/img/VistaComentarios.png)
-
-
----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Funcionalidad de la APP 🛠️
 

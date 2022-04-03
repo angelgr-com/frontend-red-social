@@ -20,7 +20,9 @@ const DeleteComment = (props) => {
     // props.dispatch({type: , payload: }); 
     // navigate();
     // }
-
+    let config = {
+        headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
     // Funcion que sube el thread cambiado a BBDD
     const eraseComment = async () => {
         console.log("entro en funcion que borra el comentario")
@@ -28,10 +30,12 @@ const DeleteComment = (props) => {
             console.log("mando comentario a borrar a axios")
             console.log(props);
             console.log("hago llamada a axios")
-            let resultado = await axios.delete(raiz + `threads/comments/delete/${props.post}`); // NO FUNCIONA
+            let resultado = await axios.delete(raiz + `threads/comments/delete/${props.post}`,config); // NO FUNCIONA
 
             console.log("cambios llegados a backend")
             console.log(resultado.data)
+
+            
 
             // AQUI FALTA NAVIGATE A DONDE?
   

@@ -39,7 +39,9 @@ const EditComment = (props) => {
         navigate("/posts");
 
     }
-
+    let config = {
+        headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
     // Funcion que sube el comentario cambiado a BBDD
     let body = {
             content: comment.content
@@ -51,7 +53,7 @@ const EditComment = (props) => {
             console.log("mando commentario actualizado a axios")
             console.log(props);
             // console.log(props.post.id);
-            let resultado = await axios.put(raiz + `/threads/comments/edit/${props.post.id}/${props.post.state}`,body); // ENDPONT NO FUNCIONA
+            let resultado = await axios.put(raiz + `/threads/comments/edit/${props.post.id}/${props.post.state}`,body,config); // ENDPONT NO FUNCIONA
 
             console.log("cambios llegados a backend")
             setuptdatedComment(resultado.data);

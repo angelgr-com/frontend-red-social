@@ -65,14 +65,16 @@ const NewComment = (props) => {
             }]
         }
 
-
+        let config = {
+            headers: { Authorization: `Bearer ${props.credentials.token}` }
+        };
 
         try {
             console.log("elementos")
             console.log(props);
             console.log(body);
             console.log(props.post);
-            let resultado = await axios.put(raiz + `/threads/comments/new/${props.post}`, body); // VERIFICAR ESTA LINEA
+            let resultado = await axios.put(raiz + `/threads/comments/new/${props.post}`, body,config); // VERIFICAR ESTA LINEA
             console.log("commentario guardado en hook")
             console.log(resultado);
             setComment(resultado.data); // SE GUARDA EL RESULTADO EN EL HOOK

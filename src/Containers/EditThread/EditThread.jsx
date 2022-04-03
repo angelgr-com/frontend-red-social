@@ -64,14 +64,16 @@ const EditThread = (props) => {
 
         //3 envio de axios
 
-
+        let config = {
+            headers: { Authorization: `Bearer ${props.credentials.token}` }
+        };
 
         try {
             console.log("mando thread actualizado a axios")
             console.log(props);
             console.log(props.post.state);
             //console.log("hago llamada a axios")
-            let resultado = await axios.put(raiz + `/threads/${props.post.state}`, body); // VERIFICAR FINAL DE LINEA PREGUNTAR A RAFA
+            let resultado = await axios.put(raiz + `/threads/${props.post.state}`, body,config); // VERIFICAR FINAL DE LINEA PREGUNTAR A RAFA
             console.log(resultado)
             console.log("cambios llegados a backend")
             setDatosUpdateThread(resultado.data);

@@ -1,5 +1,7 @@
 .designPost {
-    background-color: lightgray;
+    background-image: linear-gradient(to right bottom, 
+    hsl(27, 50%, 95%),
+     hsl(26, 86%, 84%));
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -194,7 +196,6 @@
     height: 3em;
     width: 8em;
     background-color: darkgray;
-    border: 1px solid black;
     margin: 8em;
     display: flex;
     flex-direction: column;
@@ -214,10 +215,10 @@
 }
 
 .itemButton {
-    height: 1em;
+    height: 1.5em;
     width: 8em;
-    background-color: darkgray;
-    border: 1px solid black;
+    color: hsl(28, 90%, 18%);
+    background-color: hsl(28, 80%, 52%);
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -6,7 +6,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: lightgray;
+    background-image: linear-gradient(to right bottom, 
+    hsl(27, 50%, 95%),
+     hsl(26, 86%, 84%));
     border-top: 2px solid black;
     border-bottom: 2px solid black;
   }
@@ -14,7 +16,7 @@
   .cardnewThread {
       height: 29em;
       width: 40em;
-      background-color: rgb(255, 255, 255);
+      background-color: hsl(28, 71%, 95%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -45,7 +47,7 @@
       align-items: center;
       justify-content: space-around;
       font-size : 1em;
-      background-color: darkgray;
+      background-color: hsl(28, 71%, 80%);
       border: 1px solid black;
       border-radius: 1em;
   
@@ -73,7 +75,6 @@
     justify-content: center;
     height: 2em;
     width: 5em;
-    border: 1px solid black;
     border-radius: 0.5em;
   }
   
@@ -96,7 +97,6 @@
     height: 3em;
     width: 8em;
     background-color: darkgray;
-    border: 1px solid black;
     margin: 8em;
     display: flex;
     flex-direction: column;

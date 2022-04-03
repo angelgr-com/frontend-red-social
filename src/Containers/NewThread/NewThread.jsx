@@ -110,7 +110,7 @@ const NewThread = (props) => {
             </div>
             <div className="cardnewThread">
 
-                <div className="upCardnewThread">FORMULARIO DE REGISTRO</div>
+                <div className="upCardnewThread">REGISTRATION FORM</div>
                 <div className="middleCardnewThread">
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
                     <label htmlFor="title">Title</label>
@@ -124,7 +124,7 @@ const NewThread = (props) => {
                 <div className="bottomCardnewThread">
                     {msgError}
                     <div className="buttonnewThread" onClick={() => newThreadMe()}>
-                        Registrar
+                        Register
                     </div>
                 </div>
             </div>

@@ -73,9 +73,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2em;
-    width: 5em;
+    height: 3em;
+    width: 7em;
     border-radius: 0.5em;
+    background-color: hsl(28, 80%, 52%);
+    color: hsl(46, 55%, 24%);
   }
   
   

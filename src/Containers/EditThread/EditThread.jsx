@@ -4,10 +4,11 @@ import './EditThread.css';
 import { raiz } from '../../utiles';
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ID, POST } from '../../redux/types';
 
 const EditThread = (props) => {
 
-    console.log("entro en editThread");
+    //console.log("entro en editThread");
 
     // Navegar
     let navigate = useNavigate();
@@ -15,7 +16,8 @@ const EditThread = (props) => {
     // Hook
 
     const [datosUpdateThread, setDatosUpdateThread] = useState({
-        title: "", theme: "", author: "", content: ""
+        title: "", author: ""
+        // , theme: "", content: ""
 
     });
 
@@ -31,8 +33,9 @@ const EditThread = (props) => {
     };
     const goPost = async () => {
 
-        console.log("entra en goHome")
+        //console.log("entra en goHome")
         navigate("/posts");
+        props.dispatch({ type: POST, payload: props.post.state },);
 
     }
 
@@ -43,18 +46,20 @@ const EditThread = (props) => {
 
     // Funcion que sube el thread cambiado a BBDD
     const updateThread = async () => {
-        console.log("entro en funcion que actaliza el thread")
-
+        //console.log("entro en funcion 5555555555555555")
+        //console.log(datosUpdateThread)
 
 
         let body = {
-            title: datosUpdateThread.title,
-            theme: datosUpdateThread.theme,
-            posts: [{
-                author: props.credentials.name,
-                content: datosUpdateThread.content
-            }
-            ]
+            title: datosUpdateThread.title
+            // ,
+            // author: datosUpdateThread.nickname
+            // theme: datosUpdateThread.theme,
+            // posts: [{
+            //     author: props.credentials.name,
+            //     content: datosUpdateThread.content
+            // }
+            // ]
         }
 
         //3 envio de axios
@@ -64,20 +69,21 @@ const EditThread = (props) => {
         try {
             console.log("mando thread actualizado a axios")
             console.log(props);
-            console.log("hago llamada a axios")
-            let resultado = await axios.put(raiz + `/threads/${props.post}`, body); // VERIFICAR FINAL DE LINEA PREGUNTAR A RAFA
+            console.log(props.post.state);
+            //console.log("hago llamada a axios")
+            let resultado = await axios.put(raiz + `/threads/${props.post.state}`, body); // VERIFICAR FINAL DE LINEA PREGUNTAR A RAFA
             console.log(resultado)
             console.log("cambios llegados a backend")
             setDatosUpdateThread(resultado.data);
-            
+            props.dispatch({ type: POST, payload: props.post.state },);
             setTimeout(() => {
-                navigate("/posts");
+                navigate("/");
             }, 1000);
 
             // AQUI FALTA NAVIGATE A DONDE?
 
         } catch (error) {
-            // console.log(error);
+            // //console.log(error);
         }
 
     };
@@ -92,8 +98,8 @@ const EditThread = (props) => {
             <div className="formEditThread">
                 <p>UPDATE HERE YOUR THREAD <strong>TITLE</strong></p>
                 <input type="text" name="title" id="title" placeholder="write here your new title" onChange={(e) => { rellenarDatos(e) }} />
-                <input type="text" name="theme" id="theme" placeholder="write here your new theme" onChange={(e) => { rellenarDatos(e) }} />
-                <input type="text" name="content" id="content" placeholder="write here your new content" onChange={(e) => { rellenarDatos(e) }} />
+                {/* <input type="text" name="theme" id="theme" placeholder="write here your new theme" onChange={(e) => { rellenarDatos(e) }} />
+                <input type="text" name="content" id="content" placeholder="write here your new content" onChange={(e) => { rellenarDatos(e) }} /> */}
                 <div className="buttonnewComment" onClick={() => updateThread()}>UPDATE</div>
             </div>
         </div>

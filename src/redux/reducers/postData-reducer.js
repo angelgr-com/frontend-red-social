@@ -16,7 +16,7 @@ const postReducer = (state = initialState, action) => {
         return  action.payload
 
       case ID :
-        return {...state, id: action.payload};
+        return {state, id: action.payload};
 
 
       default :

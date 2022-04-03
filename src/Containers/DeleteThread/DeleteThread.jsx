@@ -39,7 +39,7 @@ const DeleteThread = (props) => {
             console.log("cambios llegados a backend")
 
             setTimeout(() => {
-                navigate("/posts");
+                navigate("/");
             }, 1000);
             // AQUI FALTA NAVIGATE A DONDE?
 

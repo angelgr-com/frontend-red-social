@@ -8,8 +8,8 @@ import { ID,POST } from '../../redux/types';
 
 const Posts = (props) => {
 
-    console.log("entro en posts");
-
+    console.log("entro en posts555555");
+    console.log(props.post);
     // Navegar
     let navigate = useNavigate();
 
@@ -24,9 +24,10 @@ const Posts = (props) => {
 
 
     // Hook
-    const [posts, setPosts] = useState([]);
+    const [posts1, setPosts1] = useState("");
     const [likes, setLikes] = useState([]);
     const [seguir, setSeguir] = useState([]);
+    const [borrar, setBorrar] = useState([]);
 
 
     // UseEffect de montaje
@@ -36,62 +37,68 @@ const Posts = (props) => {
 
     // Navegar a Home
     const goHome = async () => {
-        console.log("entra en goHome")
+        //console.log("entra en goHome")
         navigate("/");
     }
 
     // Navegar a EditComment
     const goEdit = async (e) => {
-        console.log("entra en goHome")
-        console.log("e")
+        console.log("entra en goHomeeeeeeeeee")
+        console.log(e)
+        console.log(props.post);
 
         //Guardamos el post escogido en REDUX al selecionar el post
+        props.dispatch({ type: POST, payload: props.post },);
         props.dispatch({ type: ID, payload: e });
-        // console.log("post guardado en Redux")
-        // console.log("e",props.theme.title_url,"e");
+       
+
+        // //console.log("post guardado en Redux")
+        // //console.log("e",props.theme.title_url,"e");
         //Redirigimos a la vista de detalles Post con navigate
 
     navigate("/editComment");
 }
 
 // Navegar a EditThread
-const goEditThread = async () => {
-    console.log("entra en goThread")
+const goEditThread = async (e) => {
+    //console.log("entra en goThread")
+    props.dispatch({ type: POST, payload: props.post },);
+    props.dispatch({ type: ID, payload: e });
     navigate("/editThread");
 }
 
 // Navegar a DeleteThread
 const goDeleteThread = async () => {
-    console.log("entra en goDeleteThread")
+    //console.log("entra en goDeleteThread")
     navigate("/deleteThread");
 }
 
 // Navegar a DeleteComment
 const goDeleteComment = async (e) => {
-    console.log("entra en goDeleteComment")
+    //console.log("entra en goDeleteComment")
 
     try {
 
         // props.post.text1.replace(/ /g, ""); 
-        // console.log("props.post")
-        // console.log("e",props.post,"e");
-        // console.log(typeof(props.post))
+        // //console.log("props.post")
+        // //console.log("e",props.post,"e");
+        // //console.log(typeof(props.post))
         // props.post.replace(/ /g, ""); 
-        // console.log("props.post")
-        console.log(`e${e}e`);
-        let resultado = await axios.delete(raiz + `threads/comments/delete/${e}`);
+        // //console.log("props.post")
+        //console.log(`e${e}e`);
+        let resultado = await axios.delete(raiz + `/threads/comments/delete/${e}/${posts1.title_url}`);
         // let resultado2 = await axios.get(`https://stormy-savannah-32569.herokuapp.comthreads/likes/0/${props.post}`);
 
         // resultado.data.likes=resultado2
-        console.log("resultado.data")
+        //console.log("resultado.data")
 
-        console.log(resultado);
-        setPosts(resultado.data);// SE GUARDA EL RESULTADO EN EL HOOK
-        console.log("posts guardados en hook")
-
+        //console.log(resultado);
+        setBorrar(resultado.data);// SE GUARDA EL RESULTADO EN EL HOOK
+        //console.log("posts guardados en hook")
+        navigate("/posts");
 
     } catch (error) {
-        console.log(error);
+        //console.log(error);
     }
 }
 
@@ -100,97 +107,110 @@ const goDeleteComment = async (e) => {
 
 const traePosts = async () => {
 
-    console.log("entra en la funcion Trae Posts")
+    //console.log("entra en la funcion Trae Posts")
 
     try {
 
         // props.post.text1.replace(/ /g, ""); 
-        // console.log("props.post")
-        // console.log("e",props.post,"e");
-        // console.log(typeof(props.post))
+        // //console.log("props.post")
+        // //console.log("e",props.post,"e");
+        // //console.log(typeof(props.post))
         // props.post.replace(/ /g, ""); 
-        // console.log("props.post")
+        // //console.log("props.post")
         console.log(`e${props.post}e`);
-        let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/comments/all/${props.post}`);
+        let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/${props.post}`);
         // let resultado2 = await axios.get(`https://stormy-savannah-32569.herokuapp.comthreads/likes/0/${props.post}`);
 
         // resultado.data.likes=resultado2
         console.log("resultado.data")
 
-        console.log(resultado);
-        setPosts(resultado.data);// SE GUARDA EL RESULTADO EN EL HOOK
-        console.log("posts guardados en hook")
-
+        console.log(resultado.data[0]);
+        setPosts1(resultado.data[0]);// SE GUARDA EL RESULTADO EN EL HOOK
+        //console.log("posts guardados en hook")
+        //console.log("array de posts contiene post)")
+        //console.log(posts)
 
     } catch (error) {
-        console.log(error);
+        //console.log(error);
     }
 }
 
-const daLike = async () => {
+const daLike = async (e) => {
 
-    console.log("entra en la funcion Trae Posts")
+    //console.log("entra en la funcion Trae Posts")
 
     try {
 
         // props.post.text1.replace(/ /g, ""); 
-        // console.log("props.post")
-        // console.log("e",props.post,"e");
-        // console.log(typeof(props.post))
+        // //console.log("props.post")
+        // //console.log("e",props.post,"e");
+        // //console.log(typeof(props.post))
         // props.post.replace(/ /g, ""); 
-        // console.log("props.post")
-        console.log(`e${props.post}e`);
-        let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/likes/0/${props.post}`);
+        // //console.log("props.post")
+        console.log(`${e}`);
+        console.log(`${props.post}`);
+        console.log(raiz+`/threads/likes/${e}/${props.post}`);
+        let resultado = await axios.get(raiz+`/threads/likes/${e}/${props.post}`);
         console.log("resultado.data000000")
         console.log(resultado);
-        console.log("posts guardados en hook")
+        //console.log("posts guardados en hook")
+        traePosts()
         setLikes(resultado); // SE GUARDA EL RESULTADO EN EL HOOK
 
 
 
     } catch (error) {
-        console.log(error);
+        //console.log(error);
     }
 }
 const sigue = async (a) => {
 
-    console.log("entra en la funcion Trae Posts")
+    //console.log("entra en la funcion Trae Posts")
 
     try {
 
         // props.post.text1.replace(/ /g, ""); 
-        // console.log("props.post")
-        // console.log("e",props.post,"e");
-        // console.log(typeof(props.post))
+        // //console.log("props.post")
+        // //console.log("e",props.post,"e");
+        // //console.log(typeof(props.post))
         // props.post.replace(/ /g, ""); 
-        // console.log("props.post")
-        console.log(props.credentials.name);
-        console.log(a);
+        // //console.log("props.post")
+        //console.log(props.credentials.name);
+        //console.log(a);
         let resultado = await axios.put(raiz + `/users/${a}/add-follower/${props.credentials.name}`);
-        console.log("resultado.data")
-        console.log(resultado);
+        //console.log("resultado.data")
+        //console.log(resultado);
         setSeguir(resultado); // SE GUARDA EL RESULTADO EN EL HOOK
-        console.log("posts guardados en hook")
+        //console.log("posts guardados en hook")
 
 
     } catch (error) {
-        console.log(error);
+        //console.log(error);
     }
 }
 
 
-if (posts !== undefined) {
+if (posts1 !== "") {
     console.log("array de posts contiene post)")
+    // console.log(posts1.posts)
+    // console.log(likes)
+    // console.log(posts1.posts)
+    console.log("array de posts contiene post)")
+    console.log(posts1)
     // aqui mapeo porque ya las tengo
     return (
         <div className="designPost">
             <div className="topDesignPost">
                 <div className="itemButtonNewPost" onClick={() => newComment()} >New comment</div>
-                <div className="itemButtonNewPost" onClick={() => goEditThread()} >Edit Thread</div>
+                <div className="itemButtonNewPost" onClick={() => goEditThread(posts1.title_url)} >Edit Thread</div>
                 <div className="itemButtonNewPost" onClick={() => goDeleteThread()} >Delete Thread</div>
                 <div className="itemButtonNewPost" onClick={() => goHome()} >Home</div>
             </div>
-            {posts.map(
+            <div className="topDesignPost">
+            <div className="containerPostDownGlobalRightUp">{posts1.title}</div>
+                
+            </div>
+            {posts1.posts.map(
                 item => {
                     console.log(item)
                     console.log("eeeeeeeeeeeee")
@@ -205,12 +225,12 @@ if (posts !== undefined) {
                                 <div className="containerPostDownGlobal">
                                     <div className="containerPostDownGlobalLeft">
                                         <div className="nickname"> NICKNAME{item.author}</div>
-                                        <div className="itemButton" onClick={() => daLike()} >Like</div>
+                                        <div className="itemButton" onClick={() => daLike(item._id)} >Like</div>
                                         <div className="itemButton" onClick={() => sigue(item.author)} >Seguir</div>
                                         {/* <div className="avatar">AVATAR{item.avatar}</div> */}
                                     </div>
                                     <div className="containerPostDownGlobalRight">
-                                        <div className="containerPostDownGlobalRightUp">{item.title}</div>
+                                        {/* <div className="containerPostDownGlobalRightUp">{item.title}</div> */}
                                         <div className="containerPostDownGlobalRightMiddle">{item.content}</div>
                                         <div className="containerPostDownGlobalRightDown">
                                             <div className="containerPostDownGlobalRightDownLike"> Likes {item.likes}</div>

@@ -60,7 +60,7 @@ const NewComment = (props) => {
         console.log("todo ha ido bien", comment)
         let body = {
             posts: [{
-                author: props.credentials.name,
+                author: props.credentials.nickname,
                 content: comment.content
             }]
         }

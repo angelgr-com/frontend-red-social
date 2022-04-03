@@ -59,6 +59,7 @@ const NewThread = (props) => {
         };
 
         console.log("todo ha ido bien")
+        console.log(props.post)
 
         //2construimos el body
 
@@ -105,8 +106,8 @@ const NewThread = (props) => {
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
                     <label htmlFor="title">Title</label>
                     <input className='inputnewThread' type="text" name="title" id="title" placeholder="title:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
-                    <label htmlFor="theme">Theme</label>
-                    <input className='inputnewThread' type="text" name="theme" id="theme" title="theme" placeholder="theme:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
+                    {/* <label htmlFor="theme">Theme</label>
+                    <input className='inputnewThread' type="text" name="theme" id="theme" title="theme" placeholder="theme:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /> */}
                     <label htmlFor="content">Content</label>
                     <input className='inputnewThread' type="text" name="content" id="content" title="content" placeholder="content:" autoComplete="off" onChange={(e) => { rellenarDatos(e) }} />
 

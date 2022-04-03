@@ -44,7 +44,8 @@ const Register = (props) => {
     const registerMe = async () => {  
  
         //Array de distintos campos
-
+        console.log("todo ha ido bien")
+        console.log(datosUser)
         setMsgError("");
         let error = "";
 
@@ -63,9 +64,12 @@ const Register = (props) => {
             };
         };
 
-        console.log("todo ha ido bien")
+        
 
         //2construimos el body
+        // if(datosUser.name){
+        //     datosUser.name=""
+        // }
 
         let body = {
             name: datosUser.name,
@@ -75,6 +79,8 @@ const Register = (props) => {
             avatar: datosUser.avatar,
             isAdmin: datosUser.isAdmin
         }
+        console.log("todo ha ido bien44444444")
+        console.log(body)
 
         //3 envio de axios
 
@@ -102,12 +108,12 @@ const Register = (props) => {
                 <div className="upCardRegister">FORMULARIO DE REGISTRO</div>
                 <div className="middleCardRegister">
                     {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
-                    <input className='inputRegister' type="text" name="name" id="name" title="name" placeholder="name:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input className='inputRegister' type="text" name="nickname" id="nickname" title="nickname" placeholder="nickname:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='inputRegister' type="text" name="name" id="name" title="name" placeholder="name:"  onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='inputRegister' type="text" name="nickname" id="nickname" title="nickname" placeholder="nickname:"  onChange={(e)=>{rellenarDatos(e)}}/>
                     <input className='inputRegister' type="text" name="email" id="email" title="email" placeholder="email:" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
                   
                     <input className='inputRegister' type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
-                    <input className='inputRegister'  type="text" name="avatar" id="avatar" title="avatar" placeholder="avatar" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                    <input className='inputRegister'  type="text" name="avatar" id="avatar" title="avatar" placeholder="avatar" onChange={(e)=>{rellenarDatos(e)}}/>
                    
                 </div>
                 <div className="bottomCardRegister">

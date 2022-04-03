@@ -35,6 +35,7 @@ const EditComment = (props) => {
     const goPost = async () => {
 
         console.log("entra en goHome")
+        props.dispatch({ type: POST, payload: props.post.state },);
         navigate("/posts");
 
     }
@@ -48,12 +49,19 @@ const EditComment = (props) => {
         console.log("entro en funcion que actaliza el comentario")
         try {
             console.log("mando commentario actualizado a axios")
-            console.log(props.post.id);
-            let resultado = await axios.put(raiz + `/threads/comments/edit/${props.post.id}`,body); // ENDPONT NO FUNCIONA
+            console.log(props);
+            // console.log(props.post.id);
+            let resultado = await axios.put(raiz + `/threads/comments/edit/${props.post.id}/${props.post.state}`,body); // ENDPONT NO FUNCIONA
 
             console.log("cambios llegados a backend")
             setuptdatedComment(resultado.data);
             console.log(resultado.data)
+
+props.dispatch({ type: POST, payload: props.post.state },);
+
+            setTimeout(() => {
+                navigate("/posts");
+            }, 1000);
 
 
         } catch (error) {

@@ -9,7 +9,6 @@
     flex-wrap: wrap;
     row-gap: 2em;
     padding: 2em;
-    
 }
 
 .itemPost {
@@ -24,7 +23,7 @@
 .containerPostUp {
     height: 3em;
     width: 100%;    
-    background-color: hsl(28, 71%, 80%);
+    background-color: hsl(28, 71%, 85%);
     display: flex;
     align-items: center;
 }
@@ -73,7 +72,7 @@
 }
 
 .nickname {
-    height: 15%;
+    height: 100%;
     width: 95%;
     background-color: hsl(26, 73%, 75%);
     margin-top: 1em;
@@ -106,8 +105,11 @@
 }
 
 .containerPostDownGlobalRightUp {
-    height: 10%;
-    width: 95%;
+    font-size: 1.5rem;
+    color: hsl(28, 69%, 30%);
+    text-shadow: 1px 1px 1px hsl(28deg 69% 60%);
+    height: 2em;
+    width: 53em;
     background-color: hsl(26, 73%, 75%);
     margin-right: 1em;
     margin-left: 1em;
@@ -173,6 +175,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .containerPostDownGlobalRightDownUpdateDelete{
@@ -182,11 +185,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .itemButtonNewPost {
     height: 3em;
     width: 8em;
-    background-color: darkgray;
+    color: hsl(28, 90%, 18%);
+    background-color: hsl(28, 80%, 52%);
     margin: 8em;
     display: flex;
     flex-direction: column;
@@ -198,7 +203,7 @@
 
 .topDesignPost{
     height: 5em;
-    width: 100%;
+    width: 93em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -207,7 +212,7 @@
 }
 
 .itemButton {
-    height: 1.5em;
+    height: 2em;
     width: 8em;
     color: hsl(28, 90%, 18%);
     background-color: hsl(28, 80%, 52%);

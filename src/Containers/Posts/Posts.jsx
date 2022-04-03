@@ -14,9 +14,9 @@ const Posts = (props) => {
     // Navegar
     let navigate = useNavigate();
 
-    const navegar = () => {
-        navigate("/");
-    }
+    // const navegar = () => {
+    //     navigate("/");
+    // }
 
     const newComment = () => {
         navigate("/newComment");
@@ -207,9 +207,8 @@ if (posts1 !== "") {
                 <div className="itemButtonNewPost" onClick={() => goDeleteThread()} >Delete Thread</div>
                 <div className="itemButtonNewPost" onClick={() => goHome()} >Home</div>
             </div>
-            <div className="topDesignPost">
-            <div className="containerPostDownGlobalRightUp">{posts1.title}</div>
-                
+            <div className="topDesignTitle">
+                <div className="containerPostDownGlobalRightUp">{posts1.title}</div>
             </div>
             {posts1.posts.map(
                 item => {

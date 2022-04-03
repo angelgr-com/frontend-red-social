@@ -69,11 +69,11 @@ const Header = (props) => {
                     }
                     {
                         (window.location.pathname === "/register") &&
-                        <div className="link" onClick={() => navegar("/register")}><b>Registro</b></div>
+                        <div className="link" onClick={() => navegar("/register")}><b>Register</b></div>
                     }
                     {
                         (window.location.pathname !== "/register") &&
-                        <div className="link" onClick={() => navegar("/register")}>Registro</div>
+                        <div className="link" onClick={() => navegar("/register")}>Register</div>
                     }
                 </div>
             </div>

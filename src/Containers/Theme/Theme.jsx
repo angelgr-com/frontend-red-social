@@ -55,12 +55,16 @@ const Theme = (props) => {
         navigate("/newThread");
     };
 
+
+    let themeName = props.post;
+    themeName = translateTheme(themeName);
+
     return(
         
         <div className="designTheme">
             <div className="topSectionTheme">
             <div className="itemButton" onClick={()=>newThread()} >New thread</div> 
-            <div className="itemTheme">Threads about {props.post}</div>
+            <div className="itemTheme">Threads about {themeName} cuisine</div>
             <div className="itemButton" onClick={()=>goHome()} >Home</div> 
             </div>
             <div className="contenidoPosts">
@@ -82,6 +86,27 @@ const Theme = (props) => {
     ) 
 
 };
+
+const translateTheme = (theme) => {
+    switch (theme) {
+        case 'española':
+            return 'Spanish';
+        case 'francesa':
+            return 'French'; 
+        case 'italiana':
+            return 'Italian';
+        case 'mexicana':
+            return 'Mexican';
+        case 'china':
+            return 'Chinese';
+        case 'americana':
+            return 'American';
+        case 'inglesa':
+            return 'English';
+        default:
+            return 'theme';
+    }
+}
 
 export default connect((state) => ({
     post: state.post,

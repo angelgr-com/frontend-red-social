@@ -53,10 +53,16 @@ const DeleteThread = (props) => {
 
         <div className="designDeleteThread">
             <div className="topDesignPost">
-
-                <div className="itemButtonNewPost" onClick={() => goPost()} >Post</div>
+                <div className="itemButtonNewPost"
+                     onClick={() => goPost()} >
+                    Post
+                </div>
             </div>
-            <div className="formEditThread" onClick={() => eraseThread()}>DELETE THREAD HERE</div>
+            <div className="formEditThread" 
+                 onClick={() => eraseThread()}>
+                <p>Are you sure you want to delete this thread?<br/><br/>This action can't be undone.</p>
+                <div className="deleteButton">DELETE THREAD</div>
+            </div>
         </div>
 
     )

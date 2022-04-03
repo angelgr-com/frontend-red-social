@@ -165,25 +165,33 @@ const Profile = (props) => {
 
                     <div className="designProfileInputs">
 
-                        <div className="inputProfile"><b>Name:<input type="text" name="name" id="name" title="name" placeholder={props.credentials.name} onChange={(e) => { rellenarDatos(e) }} />
-                        </b></div>
+                        <div className="inputProfile">
+                            <label>Name:</label>
+                            <input type="text" name="name" id="name" title="name" placeholder={props.credentials.name} onChange={(e) => { rellenarDatos(e) }} />
+                        </div>
 
                         {/* <div className="inputProfile"><b>Nickname:</b><input type="text" name="email" id="email" title="email" placeholder={props.credentials.nickname} autoComplete="off" onChange={(e) => { rellenarDatos(e) }} /></div> */}
 
 
-                        <div className="inputProfile"><b>Email:</b><input type="email" name="email" id="email" title="email" placeholder={props.credentials.email}  onChange={(e) => { rellenarDatos(e) }} /></div>
+                        <div className="inputProfile">
+                            <label>Email:</label>
+                            <input type="email" name="email" id="email" title="email" placeholder={props.credentials.email}  onChange={(e) => { rellenarDatos(e) }} /></div>
 
 
 
-                        <div className="inputProfile"><b>Password:</b><input type="text" name="password" id="password" title="password" placeholder="*****"  onChange={(e) => { rellenarDatos(e) }} />
+                        <div className="inputProfile">
+                            <label>Password:</label>
+                            <input type="text" name="password" id="password" title="password" placeholder="*****"  onChange={(e) => { rellenarDatos(e) }} />
                         </div>
 
-                        <div className="inputProfile"><b>Avatar:</b><input type="text" name="Avatar" id="Avatar" title="Avatar" onChange={(e) => { rellenarDatos(e) }} />
-                        </div>
+                        {/* <div className="inputProfile">
+                            <label>Avatar:</label>
+                            <input type="text" name="Avatar" id="Avatar" title="Avatar" onChange={(e) => { rellenarDatos(e) }} />
+                        </div> */}
 
 
                         <div className="profileFieldButton">
-                            <div className="buttonUpdate" onClick={() => updateUser()}>Actualiza</div>
+                            <div className="buttonUpdate" onClick={() => updateUser()}>Update</div>
                         </div>
 
 

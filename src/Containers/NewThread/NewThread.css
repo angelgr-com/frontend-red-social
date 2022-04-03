@@ -1,7 +1,7 @@
 
 .designnewThread {
     width: 100%;
-    height: 36em;
+    height: 34em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,12 +9,10 @@
     background-image: linear-gradient(to right bottom, 
     hsl(27, 50%, 95%),
      hsl(26, 86%, 84%));
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
   }
   
   .cardnewThread {
-      height: 29em;
+      height: 23em;
       width: 40em;
       background-color: hsl(28, 71%, 95%);
       display: flex;
@@ -38,17 +36,16 @@
   }
   
   .middleCardnewThread {
-      height: 25em;
+      height: 15em;
       width: 30em;
-      margin-top: 1em;
-      margin-bottom: 1em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
       font-size : 1em;
       background-color: hsl(28, 71%, 80%);
-      border: 1px solid black;
       border-radius: 1em;
   
   }
@@ -65,7 +62,7 @@
   .inputnewThread{
     height: 3em;
     width: 20em;
-    border: 1px solid black;
+    border: none;
     border-radius: 1em;
    } 
   
@@ -73,9 +70,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2em;
-    width: 5em;
+    height: 3em;
+    width: 7em;
     border-radius: 0.5em;
+    background-color: hsl(28, 80%, 52%);
+    color: hsl(46, 55%, 24%);
   }
   
   
@@ -97,7 +96,7 @@
     height: 3em;
     width: 8em;
     background-color: darkgray;
-    margin: 8em;
+    margin: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;

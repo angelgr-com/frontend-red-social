@@ -95,13 +95,8 @@ const NewComment = (props) => {
 
                 <div className="itemButtonNewPost" onClick={() => goPost()} >Home</div>
             </div>
-            <p>CREA AQUI TU COMENTARIO</p>
-            <br />
-            <br />
-            <p>TRAER AUTHOR POR PROPS</p>
-            <br />
-            <label htmlFor="content">content</label>
-            <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" onChange={(e) => { rellenarDatos(e) }}></textarea>
+             <label htmlFor="content">Add here a new comment: </label>
+            <textarea name="content" id="content" placeholder="write your comments" autoComplete="off" rows="10" cols="50" onChange={(e) => { rellenarDatos(e) }}></textarea>
             <div className="buttonnewComment" onClick={() => dataComment()}>
                 Registrar
             </div>

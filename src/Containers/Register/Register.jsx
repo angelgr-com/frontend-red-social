@@ -78,7 +78,7 @@ const Register = (props) => {
             isAdmin: false
         }
         // console.log("todo ha ido bien44444444")
-        console.log('body a enviar al backend:', body)
+        // console.log('body a enviar al backend:', body)
 
         //3 envio de axios
 

@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { raiz } from '../../utiles';
 
 const NewThread = (props) => {
-    console.log("entro en newThread")
+    // console.log("entro en newThread")
 
     // Navegar
 
@@ -30,7 +30,7 @@ const NewThread = (props) => {
     };
     const goThread = async () => {
 
-        console.log("entra en goHome")
+        // console.log("entra en goHome")
         navigate("/:theme");
 
     }
@@ -58,16 +58,25 @@ const NewThread = (props) => {
             };
         };
 
-        console.log("todo ha ido bien")
-        console.log(props.post)
+        // console.log("todo ha ido bien")
+        // console.log(props.post)
 
         //2construimos el body
 
+        console.log("props.post para body: ", props.post);
+        // datosNewThread para body:  {title: 'nuevo', theme: '', author: '', content: 'hilo'}
+
+        // console.log("datosNewThread para body: ", datosNewThread);
+        // datosNewThread para body:  {title: 'nuevo', theme: '', author: '', content: 'hilo'}
+
+        console.log("props.credentials.user para body: ", props.credentials.user);
+        // {token: '', user: {…}}
+
         let body = {
             title: datosNewThread.title,
-            theme: datosNewThread.theme,
+            theme: props.post,
             posts: [{
-                author: props.credentials.name,
+                author: props.credentials.nickname,
                 content: datosNewThread.content
             }
             ]
@@ -79,7 +88,7 @@ const NewThread = (props) => {
         try {
 
             let resultado = await axios.post(raiz + "/threads/", body);
-            console.log(resultado);
+            // console.log(resultado);
 
             setTimeout(() => {
                 navigate("/theme");

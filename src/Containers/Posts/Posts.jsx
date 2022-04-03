@@ -5,6 +5,7 @@ import './Posts.css';
 import axios from 'axios';
 import { raiz } from '../../utiles';
 import { ID,POST } from '../../redux/types';
+import moment from 'moment';
 
 const Posts = (props) => {
 
@@ -224,17 +225,19 @@ if (posts1 !== "") {
                             <div className="containerPostDown">
                                 <div className="containerPostDownGlobal">
                                     <div className="containerPostDownGlobalLeft">
-                                        <div className="nickname"> NICKNAME{item.author}</div>
-                                        <div className="itemButton" onClick={() => daLike(item._id)} >Like</div>
-                                        <div className="itemButton" onClick={() => sigue(item.author)} >Seguir</div>
+                                        <div className="nickname">{item.author}</div>
+                                        <div className="itemButton" onClick={() => daLike(item._id)} >Like comment</div>
+                                        <div className="itemButton" onClick={() => sigue(item.author)} >Follow {item.author}</div>
                                         {/* <div className="avatar">AVATAR{item.avatar}</div> */}
                                     </div>
                                     <div className="containerPostDownGlobalRight">
                                         {/* <div className="containerPostDownGlobalRightUp">{item.title}</div> */}
                                         <div className="containerPostDownGlobalRightMiddle">{item.content}</div>
                                         <div className="containerPostDownGlobalRightDown">
-                                            <div className="containerPostDownGlobalRightDownLike"> Likes {item.likes}</div>
-                                            <div className="containerPostDownGlobalRightDownDate">{item.date}</div>
+                                            <div className="containerPostDownGlobalRightDownLike"> {item.likes} likes</div>
+                                            <div className="containerPostDownGlobalRightDownDate">
+                                                {moment(item.date).subtract(1, 'days').calendar()}
+                                            </div>
                                             <div className="containerPostDownGlobalRightDownUpdate">
                                                 <div className="containerPostDownGlobalRightDownUpdateEdit" onClick={() => goEdit(item._id)}>Edit</div>
                                                 <div className="containerPostDownGlobalRightDownUpdateDelete" onClick={() => goDeleteComment(item._id)} >Delete</div>

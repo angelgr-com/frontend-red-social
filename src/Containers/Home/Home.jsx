@@ -59,7 +59,7 @@ const navegarRegister = () => {
                     <div className="designHomeWelcome">
                         <h1>Welcome! We're a community of food lovers!</h1>
                         <h2>Please, register to be able to vote for the recipes you like.</h2>
-                        <h3>The more votes we receive and get out there, that's how many people will enjoy these delicious dishes.</h3>
+                        <h3>As more votes we get, more people will enjoy these delicious dishes.</h3>
                     </div>
                     <div className="designThemes">
                         <div className="themeEspañola" onClick={()=>navegar("/:theme","española")}>SPANISH</div>

@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     background-image: linear-gradient(to right bottom, 
     hsl(27, 50%, 95%),
      hsl(26, 86%, 84%));

@@ -1,6 +1,6 @@
 .designTheme {
-    width: 95.8%;
-    min-height: 65vh;
+    width: 100%;
+  height: 100vh;
     padding: 2em;
     display: flex;
     flex-direction: column;

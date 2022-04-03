@@ -2,7 +2,7 @@
 .designAdmin {
     background-color: lightgray;
     width: 100vw;
-    height: 34em;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

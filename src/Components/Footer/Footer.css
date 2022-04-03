@@ -1,7 +1,7 @@
 .designFooter {
     height: 5em;
     width: 100%;
-    color: hsl(28, 30%, 20%);
+    background-color: hsl(28, 70%, 80%);
     font-weight: bold;
     display:flex;
     flex-direction: row;

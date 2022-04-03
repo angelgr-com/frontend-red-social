@@ -79,9 +79,9 @@ const Header = (props) => {
             </div>
         )
     } else {
-        console.log("props.credentials");     
+        // console.log("props.credentials");     
 
-        console.log(props.credentials);     
+        // console.log(props.credentials);     
         return (
             
             <div className='designHeaderGlobal'>

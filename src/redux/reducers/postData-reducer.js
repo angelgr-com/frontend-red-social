@@ -1,18 +1,22 @@
-import {POST,THEME} from '../types'; 
+import {ID,POST,THEME} from '../types'; 
 
 const initialState = {
   post: "",
-  theme: ""
+  theme: "",
+  id:""
 };
 
 const postReducer = (state = initialState, action) => {
   switch(action.type){
       //Saves Post
       case POST :
-          return action.payload;
+        return action.payload
 
       case THEME :
-        return action.payload;
+        return  action.payload
+
+      case ID :
+        return {...state, id: action.payload};
 
 
       default :

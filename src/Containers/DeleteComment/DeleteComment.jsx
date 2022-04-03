@@ -4,7 +4,7 @@ import './DeleteComment.css';
 import { raiz } from '../../utiles';
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { POST,ID } from '../../redux/types';
 const DeleteComment = (props) => {
 
     console.log("entro en DeleteComment");

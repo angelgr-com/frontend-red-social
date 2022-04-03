@@ -4,11 +4,15 @@ import './EditComment.css';
 import { raiz } from '../../utiles';
 import React, { useState } from 'react';
 import axios from 'axios';
+import { ID, POST } from '../../redux/types';
 
 const EditComment = (props) => {
 
     console.log("entro en editComment");
-
+    // Hook
+    const [comment, setComment] = useState({
+        content: ""
+    });
     // Navegar
     let navigate = useNavigate();
 
@@ -20,18 +24,32 @@ const EditComment = (props) => {
     // props.dispatch({type: , payload: }); 
     // navigate();
     // }
+    const rellenarDatos = (e) => {
+        console.log(e.target.value)
+        setComment({
+            ...comment,
+            [e.target.name]: e.target.value
+        })
+    };
 
+    const goPost = async () => {
 
+        console.log("entra en goHome")
+        navigate("/posts");
 
+    }
 
     // Funcion que sube el comentario cambiado a BBDD
-
+    let body = {
+            content: comment.content
+       
+    }
     const updateComment = async () => {
         console.log("entro en funcion que actaliza el comentario")
         try {
             console.log("mando commentario actualizado a axios")
-            console.log(props);
-            let resultado = await axios.put(raiz+`/threads/comments/edit/${props.post}`); // ENDPONT NO FUNCIONA
+            console.log(props.post.id);
+            let resultado = await axios.put(raiz + `/threads/comments/edit/${props.post.id}`,body); // ENDPONT NO FUNCIONA
 
             console.log("cambios llegados a backend")
             setuptdatedComment(resultado.data);
@@ -47,9 +65,13 @@ const EditComment = (props) => {
     return (
 
         <div className="designEditComment">
+            <div className="topDesignPost">
+
+<div className="itemButtonNewPost" onClick={() => goPost()} >Post</div>
+</div>
             <div className="formEditComment">
                 <p>UPDATE HERE YOUR COMMENT</p>
-                <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" >FALTA TRAER EL CONTENIDO PARA ACTUALIZARLO</textarea>
+                <textarea name="content" id="content" placeholder="write your comments:" autoComplete="off" rows="10" cols="50" onChange={(e) => { rellenarDatos(e) }}></textarea>
                 <div className="buttonnewComment" onClick={() => updateComment()}>UPDATE</div>
 
                 {/* {{base_url}}threads/comments/edit/como-hacer-una-buena-tortilla-de-patatas */}

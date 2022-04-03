@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
@@ -8,15 +7,14 @@ import { connect } from "react-redux";
 import {raiz} from '../../utiles';
 
 const Register = (props) => {
-    console.log("entro en Register")
+    // console.log("entro en Register")
 
     // Navegar
     let navigate = useNavigate();
 
     //Hooks
     const [datosUser, setDatosUser] = useState({
-        name: "", nickname: "", email: "", password: "", password2: "", avatar: "" 
-            
+        name: "", nickname: "", email: "", password: "", password2: "", avatar: "", isAdmin: ""
     });
 
     const [msgError, setMsgError] = useState("");
@@ -44,8 +42,8 @@ const Register = (props) => {
     const registerMe = async () => {  
  
         //Array de distintos campos
-        console.log("todo ha ido bien")
-        console.log(datosUser)
+        // console.log("todo ha ido bien")
+        // console.log(datosUser)
         setMsgError("");
         let error = "";
 
@@ -66,7 +64,7 @@ const Register = (props) => {
 
         
 
-        //2construimos el body
+        // construimos el body
         // if(datosUser.name){
         //     datosUser.name=""
         // }
@@ -77,17 +75,17 @@ const Register = (props) => {
             email: datosUser.email,
             password: datosUser.password,
             avatar: datosUser.avatar,
-            isAdmin: datosUser.isAdmin
+            isAdmin: false
         }
-        console.log("todo ha ido bien44444444")
-        console.log(body)
+        // console.log("todo ha ido bien44444444")
+        console.log('body a enviar al backend:', body)
 
         //3 envio de axios
 
         try {
             
             let resultado = await axios.post(raiz + "/users/register", body);
-            console.log(resultado);
+            // console.log(resultado);
             
                 setTimeout(()=>{
                     navigate("/login");

@@ -96,5 +96,6 @@ props.dispatch({ type: POST, payload: props.post.state },);
 
 
 export default connect((state) => ({
-    post: state.post
+    post: state.post,
+    credentials: state.credentials
 }))(EditComment);

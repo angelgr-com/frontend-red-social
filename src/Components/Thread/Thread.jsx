@@ -30,13 +30,14 @@ const Header = (props) => {
 
 
     // // console.log(window.location.pathname);
+    console.log('props.theme antes de return: ', props.theme);
     return (
 
         <div className="itemThread" key={props.theme._id} onClick={()=>choosePost()} >
             <div className="author">{props.theme.posts[0].author}</div>
             <div className="title">{props.theme.title}</div>
             <div className="likes">Likes: {props.theme.posts[0].likes}</div>
-            <div className="date">{moment(props.theme.posts[0].date).subtract(1, 'days').calendar()}</div> 
+            <div className="date">{moment(props.theme.date).subtract(1, 'days').calendar()}</div> 
         </div>
         //tittle_url
 

@@ -76,5 +76,6 @@ const DeleteThread = (props) => {
 
 
 export default connect((state) => ({
-    post: state.post
+    post: state.post,
+    credentials: state.credentials
 }))(DeleteThread);

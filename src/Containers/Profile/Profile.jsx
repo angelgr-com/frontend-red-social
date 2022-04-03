@@ -101,9 +101,9 @@ const Profile = (props) => {
         // let config = {
         //     headers: { Authorization: `Bearer ${props.credentials.token}` }
         // };
-        console.log("datosUser5555555")
-        console.log(body)
-        console.log(props.credentials.nickname)
+        // console.log("datosUser5555555")
+        // console.log(body)
+        // console.log(props.credentials.nickname)
         let config = {
             headers: { Authorization: `Bearer ${props.credentials.token}` }
         };

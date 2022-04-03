@@ -5,7 +5,7 @@ import './Home.css';
 
 const Home = (props) => {
      
-console.log("entro en home");
+// console.log("entro en home");
 
 // Navegar
 let navigate = useNavigate();
@@ -29,7 +29,7 @@ const navegarRegister = () => {
     // }, [])
 
     if(props.credentials?.token === undefined){
-        console.log("NO tengo token");
+        // console.log("NO tengo token");
         return(
             
             <div className='designHome'>
@@ -51,7 +51,7 @@ const navegarRegister = () => {
         )
    
     } else {
-        console.log("estas son las credenciales", props.credentials);
+        // console.log("estas son las credenciales", props.credentials);
         return(
             
             <div className='designHome'>

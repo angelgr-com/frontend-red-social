@@ -13,7 +13,7 @@
 input {
     font-size: 1rem;
     height: 2em;
-    width: 20em;
+    width: 12em;
     border: none;
 }
 
@@ -40,7 +40,7 @@ input {
 
 .itemButtonNewPost {
     height: 3em;
-    width: 8em;
+    width: 5em;
     background-color: darkgray;
     margin: 8em;
     display: flex;

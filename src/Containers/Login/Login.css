@@ -1,18 +1,20 @@
 .designLogin {
-  background-color: lightgray;
-  width: 100%;
-  height: 34em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+    background-image: linear-gradient(to right bottom, 
+    hsl(27, 50%, 95%),
+     hsl(26, 86%, 84%));
+    width: 100%;
+    height: 34em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .cardLogin {
-  height: 23em;
-  width: 20em;
-  background-color: white;
+  height: 25em;
+  width: 25em;
+  background-color: hsl(28, 71%, 95%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,8 +24,8 @@
 
 .designFormulario {
   height: 15em;
-  width: 15em;
-  background-color: darkgrey;
+  width: 20em;
+  background-color: hsl(28, 71%, 80%);
   border-radius: 1em;
   display: flex;
   flex-direction: column;
@@ -31,7 +33,6 @@
   justify-content: space-evenly;
   margin-top: 1em;
   margin-bottom: 1em;
-  border: 1px solid black;
 }
 
 .login{
@@ -59,7 +60,6 @@
   height: 2em;
   width: 15em;
   border-radius: .5em;
-  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: space-between; 

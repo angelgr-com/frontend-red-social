@@ -80,9 +80,11 @@ const Login = (props) => {
             
             <div className='designLogin'>
                 <div className="cardLogin">
-                    <p>INTRODUZCA SUS DATOS</p>
+                    <p>ENTER LOGIN DATA</p>
                         <div className="designFormulario">
+                            <label htmlFor="email">Email:</label>
                             <input type="email" className="inputLogin" name="email" id="email" title="email" placeholder="Correo Electrónico" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}/>
+                            <label htmlFor="email">Password:</label>
                             <input type="password" className="inputLogin" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{rellenarDatos(e);}}/>
                             {msgError}
                             {msgError2}

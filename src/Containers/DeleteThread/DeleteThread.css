@@ -1,5 +1,7 @@
 .designDeleteThread {
-    background-color: lightgray;
+    background-image: linear-gradient(to right bottom, 
+    hsl(27, 50%, 95%),
+     hsl(26, 86%, 84%));
     width: 100vw;
     height: 34em;
     display: flex;
@@ -31,9 +33,10 @@
 .itemButtonNewPost {
     height: 3em;
     width: 8em;
-    background-color: darkgray;
-    border: 1px solid black;
+    color: hsl(28, 90%, 18%);
+    background-color: hsl(28, 80%, 52%);
     margin: 8em;
+    padding: 0 2em 0 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;

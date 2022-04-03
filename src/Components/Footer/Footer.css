@@ -1,11 +1,11 @@
 .designFooter {
     height: 5em;
     width: 100%;
-    color: black;
+    color: hsl(28, 30%, 20%);
     font-weight: bold;
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: darkgray;
+    background-color: hsl(28, 70%, 80%);
 }

@@ -20,7 +20,9 @@ const DeleteThread = (props) => {
     // props.dispatch({type: , payload: }); 
     // navigate();
     // }
-
+    let config = {
+        headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
     const goPost = async () => {
 
         console.log("entra en goHome")
@@ -34,7 +36,7 @@ const DeleteThread = (props) => {
             console.log("mando thread a borrar a axios")
             console.log(props);
             console.log("hago llamada a axios")
-            let resultado = await axios.delete(raiz + `/threads/${props.post}`); // NO FUNCIONA
+            let resultado = await axios.delete(raiz + `/threads/${props.post}`,config); // NO FUNCIONA
             console.log(resultado)
             console.log("cambios llegados a backend")
 

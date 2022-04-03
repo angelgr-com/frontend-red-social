@@ -104,11 +104,14 @@ const Profile = (props) => {
         console.log("datosUser5555555")
         console.log(body)
         console.log(props.credentials.nickname)
+        let config = {
+            headers: { Authorization: `Bearer ${props.credentials.token}` }
+        };
         try {
             //Hacemos el update en la base de datos
             //console.log("body")
             //console.log(body)
-            let resultado = await axios.put(raiz + `/users/${props.credentials.nickname}`, body);
+            let resultado = await axios.put(raiz + `/users/${props.credentials.nickname}`, body,config);
             //console.log("usuario actualizado enviado al backend")
             //console.log(resultado)
             setDatosUser(resultado.data);

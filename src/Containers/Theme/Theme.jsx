@@ -31,10 +31,14 @@ const Theme = (props) => {
 
     // Funcion que trae posts segun el tema 
     const bringTheme = async () => {
+
+        let config = {
+            headers: { Authorization: `Bearer ${props.credentials.token}` }
+        };
         
         try {
             // console.log("lo que le mando de post")
-            let resultado = await axios.get(raiz+`/threads/theme/${props.post}`); 
+            let resultado = await axios.get(raiz+`/threads/theme/${props.post}`,config); 
             // console.log("themes llegados de backend")
             setTheme(resultado.data);
             // console.log(resultado.data)

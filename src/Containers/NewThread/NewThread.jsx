@@ -83,11 +83,14 @@ const NewThread = (props) => {
         }
 
         //3 envio de axios
+        let config = {
+            headers: { Authorization: `Bearer ${props.credentials.token}` }
+        };
 
 
         try {
 
-            let resultado = await axios.post(raiz + "/threads/", body);
+            let resultado = await axios.post(raiz + "/threads/", body,config);
             // console.log(resultado);
 
             setTimeout(() => {

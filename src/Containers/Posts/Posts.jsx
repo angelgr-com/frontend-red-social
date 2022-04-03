@@ -77,7 +77,9 @@ const goDeleteThread = async () => {
 // Navegar a DeleteComment
 const goDeleteComment = async (e) => {
     //console.log("entra en goDeleteComment")
-
+    let config = {
+        headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
     try {
 
         // props.post.text1.replace(/ /g, ""); 
@@ -87,7 +89,7 @@ const goDeleteComment = async (e) => {
         // props.post.replace(/ /g, ""); 
         // //console.log("props.post")
         //console.log(`e${e}e`);
-        let resultado = await axios.delete(raiz + `/threads/comments/delete/${e}/${posts1.title_url}`);
+        let resultado = await axios.delete(raiz + `/threads/comments/delete/${e}/${posts1.title_url}`,config);
         // let resultado2 = await axios.get(`https://stormy-savannah-32569.herokuapp.comthreads/likes/0/${props.post}`);
 
         // resultado.data.likes=resultado2
@@ -95,8 +97,10 @@ const goDeleteComment = async (e) => {
 
         //console.log(resultado);
         setBorrar(resultado.data);// SE GUARDA EL RESULTADO EN EL HOOK
-        //console.log("posts guardados en hook")
-        navigate("/posts");
+        console.log("posts guardados en hook")
+        setTimeout(() => {
+            navigate("/");
+        }, 1000);
 
     } catch (error) {
         //console.log(error);
@@ -109,7 +113,9 @@ const goDeleteComment = async (e) => {
 const traePosts = async () => {
 
     //console.log("entra en la funcion Trae Posts")
-
+    let config = {
+        headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
     try {
 
         // props.post.text1.replace(/ /g, ""); 
@@ -119,7 +125,7 @@ const traePosts = async () => {
         // props.post.replace(/ /g, ""); 
         // //console.log("props.post")
         console.log(`e${props.post}e`);
-        let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/${props.post}`);
+        let resultado = await axios.get(`https://stormy-savannah-32569.herokuapp.com/threads/${props.post}`,config);
         // let resultado2 = await axios.get(`https://stormy-savannah-32569.herokuapp.comthreads/likes/0/${props.post}`);
 
         // resultado.data.likes=resultado2
@@ -127,6 +133,7 @@ const traePosts = async () => {
 
         console.log(resultado.data[0]);
         setPosts1(resultado.data[0]);// SE GUARDA EL RESULTADO EN EL HOOK
+        
         //console.log("posts guardados en hook")
         //console.log("array de posts contiene post)")
         //console.log(posts)
@@ -139,7 +146,9 @@ const traePosts = async () => {
 const daLike = async (e) => {
 
     //console.log("entra en la funcion Trae Posts")
-
+    let config = {
+        headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
     try {
 
         // props.post.text1.replace(/ /g, ""); 
@@ -151,7 +160,7 @@ const daLike = async (e) => {
         console.log(`${e}`);
         console.log(`${props.post}`);
         console.log(raiz+`/threads/likes/${e}/${props.post}`);
-        let resultado = await axios.get(raiz+`/threads/likes/${e}/${props.post}`);
+        let resultado = await axios.get(raiz+`/threads/likes/${e}/${props.post}`,config);
         console.log("resultado.data000000")
         console.log(resultado);
         //console.log("posts guardados en hook")
@@ -167,7 +176,9 @@ const daLike = async (e) => {
 const sigue = async (a) => {
 
     //console.log("entra en la funcion Trae Posts")
-
+    let config = {
+        headers: { Authorization: `Bearer ${props.credentials.token}` }
+    };
     try {
 
         // props.post.text1.replace(/ /g, ""); 
@@ -178,7 +189,7 @@ const sigue = async (a) => {
         // //console.log("props.post")
         //console.log(props.credentials.name);
         //console.log(a);
-        let resultado = await axios.put(raiz + `/users/${a}/add-follower/${props.credentials.name}`);
+        let resultado = await axios.put(raiz + `/users/${a}/add-follower/${props.credentials.name}`,config);
         //console.log("resultado.data")
         //console.log(resultado);
         setSeguir(resultado); // SE GUARDA EL RESULTADO EN EL HOOK

@@ -5,15 +5,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightgray;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  background-image: linear-gradient(to right bottom, 
+  hsl(27, 50%, 95%),
+   hsl(26, 86%, 84%));
 }
 
 .cardRegister {
     height: 25em;
     width: 40em;
-    background-color: rgb(255, 255, 255);
+    background-color: hsl(30, 69%, 95%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    color: rgb(0, 0, 0);
+    font-size: 1.25rem;
+    color: hsl(28, 69%, 30%);
+    text-shadow: 1px 1px 1px hsl(28deg 69% 60%);
     
     
 
@@ -45,7 +47,6 @@
     justify-content: space-around;
     font-size : 1em;
     background-color: darkgray;
-    border: 1px solid black;
     border-radius: 1em;
 
 }
@@ -71,8 +72,10 @@
   align-items: center;
   justify-content: center;
   height: 2em;
-  width: 5em;
-  border: 1px solid black;
+  width: 8em;
+  background-color: hsl(28, 80%, 52%);
+  color: hsl(46, 55%, 24%);
+  font-weight: bold;
   border-radius: 0.5em;
 }
 

@@ -143,7 +143,7 @@ const Profile = (props) => {
 
             let resultado = await axios.get(raiz + `/users/following/`+props.credentials.nickname);
             //console.log("awwwwwwwwwwwwwwwwa")
-            console.log('followers?: ', ...resultado.data);
+            // console.log('followers?: ', ...resultado.data);
             setFollowers(resultado.data);
             //console.log("usuario actualizado guardado en Hook")
 

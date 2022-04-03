@@ -5,7 +5,7 @@
      hsl(26, 86%, 84%));
     font-weight: 600;
     width: 100vw;
-    height: 34em;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

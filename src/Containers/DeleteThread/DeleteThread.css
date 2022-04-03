@@ -3,7 +3,7 @@
     hsl(27, 50%, 95%),
      hsl(26, 86%, 84%));
     width: 100vw;
-    height: 34em;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
